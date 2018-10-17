@@ -33,10 +33,10 @@ Typical agenda that will run through in our onsite class.
 * [Chapter 2](chapter-2/README.md): HTML, CSS
 * [Chapter 3](chapter-3/README.md): CSS, JS
 * [Chapter 4](chapter-4/README.md): JS, DOM, JQuery
-* [Chapter 5](chapter-5/README.md): JS, DOM, JQuery
-* [Chapter 6](chapter-6/README.md): JS Animate Library, CSS Framework, Final Project
+* [Chapter 5](chapter-5/README.md): JS, DOM, JQuery, JS Plugin
+* [Chapter 6](chapter-6/README.md): AJAX, CSS Framework, Final Project
 * [Chapter 7](chapter-7/README.md): SEO, Web Performance, Final Project
-* [Chapter 8](chapter-8/README.md): Introduction Reactjs, Final Project, preparation presentation, presentation  
+* [Chapter 8](chapter-8/README.md): Introduction Reactjs, preparation presentation, presentation  
 
 ---
 
