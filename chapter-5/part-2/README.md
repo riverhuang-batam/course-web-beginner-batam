@@ -3,5 +3,5 @@
 ---
 
 * [DOM 2](../../modules/javascript-dom-2/README.md)
-* [JQuery 1](../../modules/jquery-1/README.md)
+* [JQuery 2](../../modules/jquery-2/README.md) need create new module
 * [Homework]() need to add on modules
