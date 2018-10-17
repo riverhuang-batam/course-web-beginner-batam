@@ -1,57 +1,228 @@
-# JavaScript 8
+# JavaScript 10
 
 ---
 
-## Pattern Matching & Regular Expression
+## Immediately Invoked Function Expression (IIFE)
 
-Pattern Matching in programming is often associated with Regular Expression (regex).
-
-Regular expression is a group of characters or symbols which is used to find a specific pattern from a text.
-
-A regular expression is a pattern that is matched against a subject string from left to right. The word "Regular expression" is a mouthful, you will usually find the term abbreviated as "regex" or "regexp".
-
-Regex is used for:
-
-* replacing a text within a string
-* validating form input fields
-* extract a substring from a string based upon a pattern match
-* checking a text format like phone number, email address, zip code
-
-Imagine you are writing an application and you want to set the rules for when a user chooses their username. We want to allow the username to contain letters, numbers, underscores and hyphens. We also want to limit the number of characters in username so it does not look ugly. We use the following regular expression to validate a username:
-
-![](./assets/regex-example.png)
-
-Above regular expression can accept the strings `john_doe`, `jo-hn_doe`, and `john12_as`. It does not match `Jo` because that string contains uppercase letter and also it is too short.
-
-In JavaScript, there are built-in regex methods: `test`, `replace`, `match`, `search`.
-
-For example, here's for checking if a string is a valid email:
+An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.
 
 ```js
-const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+(function () { 
+        alert("I am an IIFE!");
+})();
 
-let email1 = "yourname@domain.com";
-let result1 = pattern.test(email1);
-console.log(result1); // true
-
-let email2 = "yourname!domain!com";
-let result2 = pattern.test(email2);
-console.log(result2); // false
+!function() {
+    alert("Hello from IIFE!");
+}();
 ```
 
 ---
 
-## References
+### Callback Functions
 
-* Guide
-  * [Learn regex the easy way](https://github.com/zeeshanu/learn-regex)
-  * [RegexOne - Learn Regular Expressions with simple, interactive exercises](https://regexone.com)
-* Tools
-  * [RegExr - Learn, Build, & Test RegEx](https://regexr.com)
-  * [Debuggex - Online visual regex tester. JavaScript, Python, and PCRE](https://www.debuggex.com)
-  * [Regex101 - Online regex tester and debugger: PHP, PCRE, Python, Golang and JavaScript](https://regex101.com)
-* Documentation
-  * [RegExp - JavaScript - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
-  * [How to Find or Validate an Email Address](https://www.regular-expressions.info/email.html)
-  * [Collection of Email Address Regular Expression That 99.99% Works](http://emailregex.com)
-  * [You Don't Know JS (book series)](https://github.com/getify/You-Dont-Know-JS)
+In Javascript, we can pass a function as an argument to another function. Then, the argument function can do a action as a callback function.
+
+```javascript
+//callback function example
+function logName(name) {
+  console.log(`My Name is ${name}`);
+}
+
+function insertCustomName(callback) {
+  var name = "Haidar";
+  callback(name);
+}
+
+insertCustomName(logName);
+```
+
+---
+
+## Promise
+
+What is promise?
+
+> Promise: Imagine you are a kid. Your mom promises you that she'll get you a new phone next week.
+>
+> -- <cite>Jecelyn Yeen</cite>
+
+A promise has 3 states :
+
+1.  pending: initial state, neither fulfilled nor rejected.
+1.  fulfilled: meaning that the operation completed successfully.
+1.  rejected: meaning that the operation failed.
+
+### Creating promises
+
+We can create new promise using `Promise` built in object.
+If the promise is fulfilled, use `resolve()` to pass your success value. If the promise is rejected, use `reject()` to pass your fail value.
+
+After a proise is fulfilled/rejected, the success/faill falue will be hadled by `.then`/`.catch`.
+
+syntax:
+
+```js
+//creating promise
+var newPromise = new Promise(function(resolve, reject) {
+  // put your code here
+  //
+  //   resolve(someValue); // use resolve if promise is fulfilled
+  // or
+  //   reject("failure reason"); // use reject is promise is rejected
+});
+
+//using promise
+newPromise
+  .then(sucessValue => {
+    //do something with sucessValue
+  })
+  .catch(error => {
+    //do something with error
+  });
+```
+
+### Basic Example
+
+Don't forget to use `Error` built-in object because `.catch` will catch an error from reject.
+
+```js
+//try it yourself, and change the condition to true/false
+const condition = false;
+
+let myFirstPromise = new Promise((resolve, reject) => {
+  if (condition) {
+    resolve("fulfilled!");
+  } else {
+    const reason = new Error("rejected!");
+    reject(reason);
+  }
+});
+
+myFirstPromise
+  .then(successMessage => {
+    console.log(".then >>> " + successMessage);
+  })
+  .catch(error => console.log(".catch >>> " + error.message));
+//console output: .catch >>> rejected!
+```
+
+### Advanced Example
+
+```js
+//promise example from scotch.io (Jecelyn Yeen)
+const isMomHappy = false;
+
+// Promise
+const willIGetNewPhone = new Promise((resolve, reject) => {
+  // fat arrow
+  if (isMomHappy) {
+    const phone = {
+      brand: "Samsung",
+      color: "black"
+    };
+    resolve(phone);
+  } else {
+    const reason = new Error("mom is not happy");
+    reject(reason);
+  }
+});
+
+const showOff = function(phone) {
+  const message =
+    "Hey friend, I have a new " + phone.color + " " + phone.brand + " phone";
+  return Promise.resolve(message);
+};
+
+// call our promise
+const askMom = function() {
+  willIGetNewPhone
+    .then(showOff)
+    .then(fulfilled => console.log(fulfilled)) // fat arrow
+    .catch(error => console.log(error.message)); // fat arrow
+};
+
+askMom();
+```
+
+---
+
+# Async Await (async/await)
+
+* [dotJS 2017 - Wes Bos - Async + Await](https://www.youtube.com/watch?v=9YkUCxvaLEk)
+
+## Async
+
+Async is a modification of `Promise` syntax, you can write `Promise` with `async` syntax easier.
+
+The return value of an async function is recognized as a promise `resolve()`
+
+example:
+
+```js
+//this async
+async function myAsyncFunction() {
+  return "theValue";
+}
+
+//is equal to
+function myAsyncFunction() {
+  return Promise.resolve("theValue");
+}
+
+//so you can call it like this
+myAsyncFunction().then(returnedVal => console.log(returnedVal));
+//console output: theValue
+```
+
+And the throw of an async function is recognized as a promise `reject()`
+
+```js
+//this
+async function my2ndAsyncFunction() {
+  throw "error";
+}
+
+//is equal to
+function my2ndAsyncFunction() {
+  return Promise.reject("error");
+}
+
+//so you can call it like this
+my2ndAsyncFunction().catch(err => console.log(err));
+//console output: error
+```
+
+## Await
+
+Await is only used with an async function. The await keyword is used in an async function to ensure that all promises returned in the async function are synchronized.
+
+```js
+async function myDate() {
+  try {
+    let dateDetails = await date;
+    let message = await orderUber(dateDetails);
+    console.log(message);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+```
+
+References :
+
+https://scotch.io/tutorials/javascript-promises-for-dummies
+https://scotch.io/courses/10-need-to-know-javascript-concepts/callbacks-promises-and-async#async-and-await
+
+---
+
+## `apply`, `call`, `bind`
+
+<!--
+* Prevent regression
+* Abstraction
+* Decomposition
+* Method chaining
+* Data parsing and serialization
+* Hoisting, Closures, Prototypes
+* Function inside function, return object with function
+-->

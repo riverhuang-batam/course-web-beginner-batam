@@ -1,241 +1,224 @@
-# JavaScript 7
-
-## JavaScript Functions
-
-Function is a feature of JavaScript that allow us to **do something** whenever the function is **called**
+# JavaScript 9
 
 ---
 
-## How to use
+## Strict mode: `use strict`
 
-### with regular `function` keyword
+"use strict"; Defines that JavaScript code should be executed in "strict mode".
+After use strict code is executed, you can not :
 
-Syntax:
-
-`function name() {}`
-
+Using a variable, without declaring it.
 ```js
-function myFunction(total_price, name) {
-  total_tax = total_price * 0.1;
+"use strict";
+x = 3.14;  
 
-  detail_tax = `name: ${name}, tax:${total_tax}`;
-  return detail_tax;
+```
+
+Deleting variable/object/function, without declaring it.
+```js
+var x = 3.14;
+delete x; 
+```
+
+Duplicating parameter.
+```js
+"use strict";
+function x(p1, p1) {}; 
+```
+
+Declaring Numeric literal variable.
+```js
+"use strict";
+var x = 010;
+```
+
+If you declare use strict inside a function, only the code inside the function is in strict mode.
+```js
+x = 3.14;       // This will not cause an error. 
+myFunction();
+
+function myFunction() {
+   "use strict";
+    y = 3.14;   // This will cause an error
 }
 ```
 
-### with variable function
+Using reserved keyword for future JavaScript version.
 
-Syntax:
+* implements
+* interface
+* let
+* package
+* private
+* protected
+* public
+* static
+* yield
 
-`const x = function() {}`
+---
+
+## scope & `this` keyword
+
+### In JavaScript there are two types of scope:
+
+* Local scope
+* Global scope
+
+Local scope example:
+```js
+// code here can NOT use carName
+
+function myFunction() {
+    var carName = "Volvo";
+
+    // code here CAN use carName
+
+}
+```
+
+
+Global scole example:
+```js
+var carName = "Volvo";
+
+// code here can use carName
+
+function myFunction() {
+
+    // code here can also use carName 
+
+}
+```
+
+If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable:
+```js
+myFunction();
+
+// code here can use carName 
+
+function myFunction() {
+    carName = "Volvo";
+}
+```
+
+### This keyword in JavaScript
+
+In a function definition, this refers to the "owner" of the function.
+
+
+If we run this code inside browser, this refer to window Object.
 
 ```js
-const myFunction = function(total_price, name) {
-  total_tax = total_price * 0.1;
+function myFunction() {
+    return this;
+}
+```
 
-  detail_tax = `name: ${name}, tax:${total_tax}`;
-  return detail_tax;
+In this example this refer to a person object.
+
+```js
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+        return this.firstName + " " + this.lastName;
+    }
 };
 ```
 
-### with arrow function
+### Function Binding Using call() and apply()
 
-Syntax:
-
-`const x = () => {}`
+The call() and apply() methods are predefined JavaScript methods.
+They can both be used to call an object method with another object as argument.
 
 ```js
-//example 1
-var names = ["Budi", "Joni", "Tono", "Jaka"];
-
-var modified_name = names.map(name => "Mr." + name);
-
-// with function inside var
-var funct = name => "Mr." + name;
-
-var modified_name = names.map(funct);
+var person1 = {
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+}
+var person2 = {
+    firstName:"John",
+    lastName: "Doe",
+}
+person1.fullName.call(person2); 
 ```
 
-### Function arguments and default parameters
-
-Syntax:
-
-`function (input = "default") {}`
+### Object Binding Using bind()
 
 ```js
-function myFunction(total_price, name) {
-  total_tax = total_price * 0.1;
-
-  detail_tax = `name: ${name}, tax:${name}`;
-  return detail_tax; // The function returns the product of p1 and p2
+var person1 = {
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
 }
-```
-
-### Recursive function
-
-Syntax:
-
-`function name() { name() }`
-
-```js
-function factorial(n, accumulator) {
-  if (n === 0) {
-    return accumulator
-  }
-  return factorial(n — 1, n * accumulator)
+var person2 = {
+    firstName:"John",
+    lastName: "Doe",
 }
-factorial(5, 1)
+
+person1.fullName.bind(person2)()
 ```
 
 ---
 
-## `var` vs `let` vs `const` in function
+## Pass by value and reference
 
-### **var**
+Pass by value copies the value into two separate spots in memory effectively making them entirely separate entities despite one initially being set equal to the other.
 
-Variables can be re-declared and updated.
+![pass-by-value](./images/pass-by-value.png)
 
+Pass by value example: 
 ```js
-var greeter = "hey hi";
-var greeter = "say Hello instead";
+let a = 5 
+let b = a
+
+console.log(a) // => 5
+console.log(b) // => 5
+
+a = 1
+
+console.log(a) // => 1
+console.log(b) // => 5
 ```
 
-It is available and can be accessed only within that function.
+All objects interact by reference in Javascript so when setting equal to each other or passing to a function they all point to the same location so when you change one object you change them all.
+
+![pass-by-refference](./images/pass-by-refference.png)
+
 
 ```js
-var tester = "hey hi";
 
-function newFunction() {
-  var hello = "hello";
+let a = {language: "Javascript"}
+let b = a
+
+console.log(a) // => {language: "Javascript"}
+console.log(b) => {language: "Javascript"}
+
+a.language = "Ruby"
+
+console.log(a) // => {language: "Ruby"}
+console.log(b) // => {language: "Ruby"}
+```
+
+## Object Constructor
+
+Sometimes we need a "blueprint" for creating many objects of the same "type".
+The way to create an "object type", is to use an object constructor function.
+
+```js
+function Person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
 }
-
-console.log(hello); // error: hello is not defined
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green");
 ```
 
-Declare on the top, before execution.
+<!-- All JavaScript objects inherit properties and methods from a prototype. -->
 
-```js
-console.log(greeter);
 
-var greeter = "say hello"; // error: greater is not defined
-```
-
-### **let**
-
-Can be updated but not redeclared.
-
-```js
-let greeting = "say Hi";
-greeting = "say Hello instead";
-```
-
-Block scoped.
-
-```js
-let greeting = "say Hi";
-let times = 4;
-
-if (times > 3) {
-  let hello = "say Hello instead";
-  console.log(hello); //"say Hello instead"
-}
-console.log(hello); // hello is not defined
-```
-
-### **const**
-
-`const` declarations are block scoped, cannot be updated or re-declared.
-
-```js
-const greeting = "say Hi";
-const greeting = "say Hello instead"; //error : Identifier 'greeting' has already been declared
-```
-
----
-
-## Summary
-
-1.  `var` declarations are globally scoped or function scoped while `let` and `const` are block scoped.
-2.  `var` variables can be updated and re-declared within its scope; `let` variables can be updated but not re-declared; `const` variables can neither be updated nor re-declared.
-3.  They are all hoisted to the top of their scope but while varvariables are initialized with undefined, `let` and `const` variables are not initialized.
-4.  While `var` and `let` can be declared without being initialized, `const` must be initialized during declaration.
-
----
-
-## Function Tips
-
-### Don't Repeat Yourself (DRY)
-
-Bad:
-
-```js
-let position = 0;
-
-position += 1;
-position += 1;
-position += 1;
-position += 1;
-position += 1;
-
-console.log(position);
-// 5
-```
-
-Good:
-
-```js
-let position = 0;
-
-function walk(distance) {
-  position += distance;
-}
-
-walk(1);
-walk(1);
-walk(1);
-walk(1);
-walk(1);
-
-console.log(position);
-// 5
-```
-
-### Single Responsibility Principle (SRP)
-
-Bad:
-
-```js
-let latitude = 0;
-let longitude = 0;
-
-function move(distance) {
-  latitude += distance;
-  longitude += distance;
-}
-
-move(20);
-
-console.log(latitude); // 20
-console.log(longitude); // 20
-```
-
-Good:
-
-```js
-let latitude = 0;
-let longitude = 0;
-
-function moveLatitude(distance) {
-  latitude += distance;
-}
-
-function moveLongitude(distance) {
-  longitude += distance;
-}
-
-moveLatitude(10);
-moveLongitude(20);
-
-console.log(latitude); // 10
-console.log(longitude); // 20
-```
+<!-- * Exception and error handling: `try catch`, `.then`/`.catch` -->

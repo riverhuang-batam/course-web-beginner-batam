@@ -1,155 +1,241 @@
-# Javascript 6
+# JavaScript 7
 
-## Built-In Functions
+## JavaScript Functions
 
-* syntax
+Function is a feature of JavaScript that allow us to **do something** whenever the function is **called**
 
-```javascript
-//variable can be String, Array, etc.. Object can be self declared Object Or Built-In Object like Math
-[variable/object].[builtin Functions/properties](param1, param2, etc ...)
-```
+---
 
-## String Built-In Functions
+## How to use
 
-Javascript's string has various built-in function like`charAt`,`length`,`toUpperCase`,`toLowerCase`,`split`,`replace`,`substr`
+### with regular `function` keyword
 
-```javascript
-//charAt Example
-var string = "Impact Byte";
-var result = string.charAt(0); //result:I["Impact", "Byte"]
-result = string.charAt(1); //result:m
-result = string.charAt(6); //result:" "(space)
+Syntax:
 
-//length Example
-var string = "Impact Byte";
-var result = string.length; //result:I
+`function name() {}`
 
-//toUpperCase example
-var string = "Impact Byte";
-var result = string.toUpperCase(); //result:IMPACT BYTE`random`,
+```js
+function myFunction(total_price, name) {
+  total_tax = total_price * 0.1;
 
-//toLowerCase example
-var string = "Impact Byte";
-var result = string.toLowerCase(); //result:impactbyte
-
-//split example
-var split = "Impact Byte Charizard";
-var result = string.split(" "); //result:["Impact", "Byte", "Charizard"]
-var result = string.split(" ", 2); //result:["Impact", "Byte"]
-
-//replace example
-var split = "Impact Byte Charizard";
-var result = str.replace("Charizard", "Bahamut"); //result:Impact Byte Bahamut
-
-//substr example
-var split = "Impact Byte Charizard";
-var result = str.substr(0, 5); //result:Impact
-var result = str.substr(0, 3); //result:Impa
-```
-
-## Array Methids
-
-javascript's array has various built-in function like `length`, `random`, `indexOf`, `push`, `pop`, `join`, `slice`, `splice`, `sort`, `reverse`
-
-```javascript
-//length Example
-var array = ["Impact", "Byte", "Charizard"];
-var result = array.length; //result:3
-
-//indexOf Example
-var array = ["Impact", "Byte", "Charizard"];
-var result = array.indexOf("Byte"); //result:1
-var result = array.indexOf("Charizard"); //result:2
-
-//push Example
-var array = ["Impact", "Byte", "Charizard"];
-var result = array.push("Bahamut"); //result:["Impact", "Byte", "Charizard","Bahamut"]
-
-//pop Example
-var array = ["Impact", "Byte", "Charizard"];
-var result = array.pop(); //result:["Impact", "Byte"]
-
-//join Example
-var array = ["Impact", "Byte", "Charizard"];
-var result = array.join("--"); //result:Impact--Byte--Charizard
-
-//slice Example
-var array = ["Impact", "Byte", "Charizard"];
-var result = array.slice(1); //result:["Byte", "Charizard"]
-var result = array.slice(1, 2); //result:["Impact", "Byte"]
-
-//sort Example
-var array = ["Impact", "Byte", "Charizard"];
-var result = array.sort(); //result:["Byte", "Charizard", "Impact"]
-
-//reverse Example
-var array = ["Impact", "Byte", "Charizard"];
-var result = array.reverse(); //result:["Charizard", "Byte", "Impact"]
-```
-
-## Math Methods
-
-javascript's Math has various built-in function like `random`, `ceil`, `floor`
-
-```javascript
-//random Example
-var result = Math.random(); //result:0.5451840492285749(random number)
-
-//ceil Example
-var result = Math.ceil(2.5); //result:3
-
-//floor Example
-var result = Math.floor(1.8); //result:1
-```
-
-## Object Methods
-
-javascript's Object has various built-in function like `assign` and `keys`
-
-```javascript
-//assign example
-var object1 = { fname: "John" };
-var object2 = { lname: "Doe" };
-var object3 = { age: 30 };
-
-var object4 = Object.assign(object1, object1, object1);
-/*
-object4:{
-  fname: "John",
-  lname: "Doe",
-  age: 30
+  detail_tax = `name: ${name}, tax:${total_tax}`;
+  return detail_tax;
 }
-object1:{
-  fname: "John",
-  lname: "Doe",
-  age: 30
-}
-*/
+```
 
-var object1 = {
-  fname: "John",
-  lname: "Doe",
-  age: 30
+### with variable function
+
+Syntax:
+
+`const x = function() {}`
+
+```js
+const myFunction = function(total_price, name) {
+  total_tax = total_price * 0.1;
+
+  detail_tax = `name: ${name}, tax:${total_tax}`;
+  return detail_tax;
 };
-var result = Object.keys(object1); //result:["fname","lname","age"]
 ```
 
-## Timing Methods
+### with arrow function
 
-```javascript
-//setInterval example
-function firstFunction() {
-  setInterval(function() {
-    alert("Impact Byte");
-  }, 3000);
-}
-firstFunction();
+Syntax:
 
-function secondFunction() {
-  setInterval(function() {
-    alert("Hello");
-  }, 3000);
+`const x = () => {}`
+
+```js
+//example 1
+var names = ["Budi", "Joni", "Tono", "Jaka"];
+
+var modified_name = names.map(name => "Mr." + name);
+
+// with function inside var
+var funct = name => "Mr." + name;
+
+var modified_name = names.map(funct);
+```
+
+### Function arguments and default parameters
+
+Syntax:
+
+`function (input = "default") {}`
+
+```js
+function myFunction(total_price, name) {
+  total_tax = total_price * 0.1;
+
+  detail_tax = `name: ${name}, tax:${name}`;
+  return detail_tax; // The function returns the product of p1 and p2
 }
-secondFunction();
-//setTimeout Example
+```
+
+### Recursive function
+
+Syntax:
+
+`function name() { name() }`
+
+```js
+function factorial(n, accumulator) {
+  if (n === 0) {
+    return accumulator
+  }
+  return factorial(n — 1, n * accumulator)
+}
+factorial(5, 1)
+```
+
+---
+
+## `var` vs `let` vs `const` in function
+
+### **var**
+
+Variables can be re-declared and updated.
+
+```js
+var greeter = "hey hi";
+var greeter = "say Hello instead";
+```
+
+It is available and can be accessed only within that function.
+
+```js
+var tester = "hey hi";
+
+function newFunction() {
+  var hello = "hello";
+}
+
+console.log(hello); // error: hello is not defined
+```
+
+Declare on the top, before execution.
+
+```js
+console.log(greeter);
+
+var greeter = "say hello"; // error: greater is not defined
+```
+
+### **let**
+
+Can be updated but not redeclared.
+
+```js
+let greeting = "say Hi";
+greeting = "say Hello instead";
+```
+
+Block scoped.
+
+```js
+let greeting = "say Hi";
+let times = 4;
+
+if (times > 3) {
+  let hello = "say Hello instead";
+  console.log(hello); //"say Hello instead"
+}
+console.log(hello); // hello is not defined
+```
+
+### **const**
+
+`const` declarations are block scoped, cannot be updated or re-declared.
+
+```js
+const greeting = "say Hi";
+const greeting = "say Hello instead"; //error : Identifier 'greeting' has already been declared
+```
+
+---
+
+## Summary
+
+1.  `var` declarations are globally scoped or function scoped while `let` and `const` are block scoped.
+2.  `var` variables can be updated and re-declared within its scope; `let` variables can be updated but not re-declared; `const` variables can neither be updated nor re-declared.
+3.  They are all hoisted to the top of their scope but while varvariables are initialized with undefined, `let` and `const` variables are not initialized.
+4.  While `var` and `let` can be declared without being initialized, `const` must be initialized during declaration.
+
+---
+
+## Function Tips
+
+### Don't Repeat Yourself (DRY)
+
+Bad:
+
+```js
+let position = 0;
+
+position += 1;
+position += 1;
+position += 1;
+position += 1;
+position += 1;
+
+console.log(position);
+// 5
+```
+
+Good:
+
+```js
+let position = 0;
+
+function walk(distance) {
+  position += distance;
+}
+
+walk(1);
+walk(1);
+walk(1);
+walk(1);
+walk(1);
+
+console.log(position);
+// 5
+```
+
+### Single Responsibility Principle (SRP)
+
+Bad:
+
+```js
+let latitude = 0;
+let longitude = 0;
+
+function move(distance) {
+  latitude += distance;
+  longitude += distance;
+}
+
+move(20);
+
+console.log(latitude); // 20
+console.log(longitude); // 20
+```
+
+Good:
+
+```js
+let latitude = 0;
+let longitude = 0;
+
+function moveLatitude(distance) {
+  latitude += distance;
+}
+
+function moveLongitude(distance) {
+  longitude += distance;
+}
+
+moveLatitude(10);
+moveLongitude(20);
+
+console.log(latitude); // 10
+console.log(longitude); // 20
 ```

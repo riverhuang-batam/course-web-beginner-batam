@@ -1,68 +1,155 @@
-# JavaScript 5
+# Javascript 6
 
-## Built-in JavaScript Array Iteration Methods
+## Built-In Functions
 
-Some of javascript array methods to do array operation or manipulation
+* syntax
 
-| Array Method      | Description                                                                      |
-| ----------------- | -------------------------------------------------------------------------------- |
-| `filter`          | Creates a new array with every element in an array that pass a test              |
-| `map`             | Creates a new array with the result of calling a function for each array element |
-| `find`            | Returns the value of the first element in an array that pass a test              |
-| `forEach`         | Calls a function for each array element                                          |
-| and many more ... | <https://goo.gl/cZL2ra>                                                          |
-
-### `filter`
-
-```js
-const words = [
-  "spray",
-  "limit",
-  "elite",
-  "exuberant",
-  "destruction",
-  "present",
-  "happy"
-];
-
-let longWords = words.filter(word => word.length > 6);
-
-// longWords: ["exuberant", "destruction", "present"]
+```javascript
+//variable can be String, Array, etc.. Object can be self declared Object Or Built-In Object like Math
+[variable/object].[builtin Functions/properties](param1, param2, etc ...)
 ```
 
-### `map`
+## String Built-In Functions
 
-```js
-var array1 = [1, 4, 9, 16];
+Javascript's string has various built-in function like`charAt`,`length`,`toUpperCase`,`toLowerCase`,`split`,`replace`,`substr`
 
-// pass a function to map
-const map1 = array1.map(x => x * 2);
+```javascript
+//charAt Example
+var string = "Impact Byte";
+var result = string.charAt(0); //result:I["Impact", "Byte"]
+result = string.charAt(1); //result:m
+result = string.charAt(6); //result:" "(space)
 
-// map1: Array [2, 8, 18, 32]
+//length Example
+var string = "Impact Byte";
+var result = string.length; //result:I
+
+//toUpperCase example
+var string = "Impact Byte";
+var result = string.toUpperCase(); //result:IMPACT BYTE`random`,
+
+//toLowerCase example
+var string = "Impact Byte";
+var result = string.toLowerCase(); //result:impactbyte
+
+//split example
+var split = "Impact Byte Charizard";
+var result = string.split(" "); //result:["Impact", "Byte", "Charizard"]
+var result = string.split(" ", 2); //result:["Impact", "Byte"]
+
+//replace example
+var split = "Impact Byte Charizard";
+var result = str.replace("Charizard", "Bahamut"); //result:Impact Byte Bahamut
+
+//substr example
+var split = "Impact Byte Charizard";
+var result = str.substr(0, 5); //result:Impact
+var result = str.substr(0, 3); //result:Impa
 ```
 
-### `find`
+## Array Methids
 
-```js
-var array1 = [5, 12, 8, 130, 44];
+javascript's array has various built-in function like `length`, `random`, `indexOf`, `push`, `pop`, `join`, `slice`, `splice`, `sort`, `reverse`
 
-var found = array1.find(function(element) {
-  return element > 10;
-});
+```javascript
+//length Example
+var array = ["Impact", "Byte", "Charizard"];
+var result = array.length; //result:3
 
-// found: 12
+//indexOf Example
+var array = ["Impact", "Byte", "Charizard"];
+var result = array.indexOf("Byte"); //result:1
+var result = array.indexOf("Charizard"); //result:2
+
+//push Example
+var array = ["Impact", "Byte", "Charizard"];
+var result = array.push("Bahamut"); //result:["Impact", "Byte", "Charizard","Bahamut"]
+
+//pop Example
+var array = ["Impact", "Byte", "Charizard"];
+var result = array.pop(); //result:["Impact", "Byte"]
+
+//join Example
+var array = ["Impact", "Byte", "Charizard"];
+var result = array.join("--"); //result:Impact--Byte--Charizard
+
+//slice Example
+var array = ["Impact", "Byte", "Charizard"];
+var result = array.slice(1); //result:["Byte", "Charizard"]
+var result = array.slice(1, 2); //result:["Impact", "Byte"]
+
+//sort Example
+var array = ["Impact", "Byte", "Charizard"];
+var result = array.sort(); //result:["Byte", "Charizard", "Impact"]
+
+//reverse Example
+var array = ["Impact", "Byte", "Charizard"];
+var result = array.reverse(); //result:["Charizard", "Byte", "Impact"]
 ```
 
-### `forEach`
+## Math Methods
 
-```js
-var array1 = ["a", "b", "c"];
-var text = "";
+javascript's Math has various built-in function like `random`, `ceil`, `floor`
 
-array1.forEach(function(element) {
-  text += element + ",";
-});
+```javascript
+//random Example
+var result = Math.random(); //result:0.5451840492285749(random number)
 
-// text: a,b,c,
+//ceil Example
+var result = Math.ceil(2.5); //result:3
+
+//floor Example
+var result = Math.floor(1.8); //result:1
 ```
 
+## Object Methods
+
+javascript's Object has various built-in function like `assign` and `keys`
+
+```javascript
+//assign example
+var object1 = { fname: "John" };
+var object2 = { lname: "Doe" };
+var object3 = { age: 30 };
+
+var object4 = Object.assign(object1, object1, object1);
+/*
+object4:{
+  fname: "John",
+  lname: "Doe",
+  age: 30
+}
+object1:{
+  fname: "John",
+  lname: "Doe",
+  age: 30
+}
+*/
+
+var object1 = {
+  fname: "John",
+  lname: "Doe",
+  age: 30
+};
+var result = Object.keys(object1); //result:["fname","lname","age"]
+```
+
+## Timing Methods
+
+```javascript
+//setInterval example
+function firstFunction() {
+  setInterval(function() {
+    alert("Impact Byte");
+  }, 3000);
+}
+firstFunction();
+
+function secondFunction() {
+  setInterval(function() {
+    alert("Hello");
+  }, 3000);
+}
+secondFunction();
+//setTimeout Example
+```
