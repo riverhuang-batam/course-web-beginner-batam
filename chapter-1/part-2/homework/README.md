@@ -9,7 +9,7 @@
 
 ####2. create list to become beginner web developer 
 
-* create website like below picture
+* create list like below picture
 ![](./assets/list-become-beginner-web-developer.png)
 * use `h2`, `ul`, `li` tag
 * create github repo named `list-to-become-beginner-web-developer`, put my code in this repo.

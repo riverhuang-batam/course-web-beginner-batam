@@ -319,7 +319,7 @@ Inline elements are meant to differentiate part of a text, to give it a particul
 
 ---
 
-## Upload to the Internet
+## push to github
 before that you should push your work to github using VS Code extension or `git push` 
 you can use github pages
 * click `settings`
