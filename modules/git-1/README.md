@@ -25,7 +25,7 @@ Firstly after we installed Git in our computer, we should `config` it first with
 
 ```sh
 $ git config --global user.name "Your Full Name"
-$ git config --global user.email "yourname@example.com"
+$ git config --global user.email "yourname@gmail.com"
 ```
 
 We can initialize a new repo in an existing folder.
@@ -59,16 +59,20 @@ $ git commit -m "Create README and HTML page"
 The followings are getting started step to use GitHub.
 
 1.  Register for a new user account
-2.  Create and manage repository on GitHub
-3.  Initialize README & license on the repo
+2.  Create repository on GitHub with name `my-portfolio`
+3. Create new repository on our laptop in terminal / cmd with this command
+```sh
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/yourusername/my-portfolio.git
+git push-u origin master
+```
 
-
-## Syncing Repo with GitHub
-
-After creating a repo on GitHub, push the changes to the remote upstream.
+or already existing repo in laptop
 
 ```sh
-$ git remote add origin git@github.com:impactbyte-learn/hello-world.git
+$ git remote add origin git@github.com:yourusername/my-portfolio.git
 $ git push -u origin master
 ```
 

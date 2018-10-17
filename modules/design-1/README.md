@@ -23,11 +23,13 @@ build my personal website
 ```
 Hi, my name is Michael Tamsil 
 
-you can see my experience, about what i did / achieve in my work
+you can see my experience / about what i did / achieve in my work
 
 you can see my study what university i got in and graduation 
 
 you can see my interest / hobby and probably have common interest with you
+
+you can see my photos & videos (i can be your hobbies)
 
 you can see me on my social media so you can know me more or contact me
 ```

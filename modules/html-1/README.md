@@ -33,9 +33,9 @@ There are various HTML elements based on our intention or usage on the web page:
 * For dividing content: `div`, `main`, `section`, `article`, `aside`, `header`, `footer`, `nav`
 * For listing things: `ul`, `ol`, `dl`, `li`
 * For creating a table: `table`, `thead`, `tbody`, `tr`, `td`
-* For multimedia: `video`, `audio`, `iframe`
 * For form inputs: `form`, `label`, `input`, `fieldset`, `textarea`, `required`, `autofocus`, `contenteditable`
 * For commenting: `<!-- comment -->`
+* For multimedia: `video`, `audio`, `iframe`
 
 You don't need to remember them all. Just use when you need it.
 
@@ -57,7 +57,7 @@ To create an HTML page, create an `index.html` or `hello.html` file in your edit
 
 <!-- the head part, mostly containing metadata -->
 <head>
-  <title>Hello HTML</title>
+  <title>yourname Portfolio</title>
 </head> <!-- close the head part -->
 
 <!-- the body part, containing the content -->
