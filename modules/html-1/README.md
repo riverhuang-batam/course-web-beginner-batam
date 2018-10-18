@@ -28,26 +28,23 @@ There are various HTML elements based on our intention or usage on the web page:
 
 * For segmenting the web page: `doctype`, `html`, `head`, `body`
 * For meta data: `title`, `meta`
-* For text: `h1`-`h7`, `p`, `a`, `span`, `b`, `i`, `strong`, `em`
+* For text: `h1`-`h7`, `p`, `a`, `span`, `b`, `i`
 * For visualizing: `img`, `button`
 * For dividing content: `div`, `main`, `section`, `article`, `aside`, `header`, `footer`, `nav`
-* For listing things: `ul`, `ol`, `dl`, `li`
-* For creating a table: `table`, `thead`, `tbody`, `tr`, `td`
-* For form inputs: `form`, `label`, `input`, `fieldset`, `textarea`, `required`, `autofocus`, `contenteditable`
+* For listing things: `ul`, `ol`, `li`
+* For creating a table: `table`, `thead`, `tbody`, `th`, `tr`, `td`
+* For form inputs: `form`, `label`, `input`, `fieldset`, `textarea`
 * For commenting: `<!-- comment -->`
 * For multimedia: `video`, `audio`, `iframe`
 
 You don't need to remember them all. Just use when you need it.
+Here is [complete html tag.](https://www.w3schools.com/tags/default.asp)
 
 ---
 
-## Hello HTML
+## index HTML
 
-To create an HTML page, create an `index.html` or `hello.html` file in your editor. Then:
-
-1.  Segment the page
-2.  Fill with meta data
-3.  Fill with content, text, or image
+To create an HTML page, create an `index.html` file in your editor. Then type in `index.html` file like below
 
 **Code:**
 
@@ -57,7 +54,7 @@ To create an HTML page, create an `index.html` or `hello.html` file in your edit
 
 <!-- the head part, mostly containing metadata -->
 <head>
-  <title>yourname Portfolio</title>
+  <title>yourname Profile</title>
 </head> <!-- close the head part -->
 
 <!-- the body part, containing the content -->
@@ -83,7 +80,7 @@ To create an HTML page, create an `index.html` or `hello.html` file in your edit
 </html> <!-- close the html page -->
 ```
 
-Bear in mind of the placement of each elements after elements.
+after finish typing. try run `live-server` by pressing on VS code 
 
 **Result:**
 
@@ -112,48 +109,6 @@ Example:
 output :
 
 ![html-image](./assets/html-image.png)
-
----
-
-## ID and Class in HTML Tags
-
-Each HTML tag can be assigned with `id` or `class`.
-
-`id` is unique, only use one `id` in a single tag.
-
-`class` can be more than one, will be used for styling purpose.
-
-`id` only:
-
-```html
-<h1 id="title">
-  Website Title
-</h1>
-```
-
-`class` only:
-
-```html
-<h1 class="blue">
-  Website Title
-</h1>
-```
-
-multiple `class`:
-
-```html
-<h1 class="cool blue">
-  Website Title
-</h1>
-```
-
-combined:
-
-```html
-<h1 id="title" class="cool blue">
-  Website Title
-</h1>
-```
 
 ---
 
@@ -296,6 +251,48 @@ Inline elements are meant to differentiate part of a text, to give it a particul
 | `<img src="images/picture.jpg">`  | picture.jpg is located in the images folder in the current folder          |
 | `<img src="/images/picture.jpg">` | picture.jpg is located in the images folder at the root of the current web |
 | `<img src="../picture.jpg">`      | picture.jpg is located in the folder one level up from the current folder  |
+
+---
+
+## ID and Class in HTML Tags
+
+Each HTML tag can be assigned with `id` or `class`.
+
+`id` is unique, only use one `id` in a single tag.
+
+`class` can be more than one, will be used for styling purpose.
+
+`id` only:
+
+```html
+<h1 id="title">
+  Website Title
+</h1>
+```
+
+`class` only:
+
+```html
+<h1 class="blue">
+  Website Title
+</h1>
+```
+
+multiple `class`:
+
+```html
+<h1 class="cool blue">
+  Website Title
+</h1>
+```
+
+combined:
+
+```html
+<h1 id="title" class="cool blue">
+  Website Title
+</h1>
+```
 
 ---
 

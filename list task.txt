@@ -1,0 +1,55 @@
+##tree house
+web design process
+web typography
+css layout basic
+responsive layout
+css flexbox layout
+css transitions transform
+SVG basic
+animating SVG with css
+CSS grid layout
+
+
+visual design
+UX for web designer
+design software
+SEO
+
+impactbyte.com
+www.ruangkreasi.co
+https://www.handrichkongdro.com/
+https://thisisneat.com.au/
+http://www.creativereactionlab.com/
+
+
+
+
+javascript-1 must add from js-2
+js-2 must added from js-3
+js-3 must added from js-4
+add content for jquery-1
+jquery-2 is empty
+javascript-plugin-1 must add something
+ajax-1 must add something
+
+
+Handy SEO tools
+Google Keyword Planner
+Google Trends
+Screaming Frog’s SEO Spider
+
+
+Awesome content creation tools
+Google Docs
+Dropbox Paper
+Quip
+Gather Content
+google map
+
+
+Website testing tools
+W3C Link Checker
+SEO Spider
+
+
+how to add comment on website

@@ -8,9 +8,6 @@ Javascript is a popular programming language that usually used to build web appl
 
 ## History
 
-- ECMAScript
-- LiveScript
-- JavaScript
 - ES5, ES6, ES7, ES+, ES Next
 
 ---
@@ -26,9 +23,8 @@ https://developer.chrome.com/devtools
 Console is javascript feature that allows us to debug our javascript apps, there are many ways to do that but this is the fastest & easiest way.
 
 - `console.log()`
-- `console.warn()`
 - `console.error()`
-- `console.assert()`
+- `console.warn()`
 
 ---
 

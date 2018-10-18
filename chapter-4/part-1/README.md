@@ -2,5 +2,6 @@
 
 ---
 
-* [Javascipt 2](../../modules/javascript-2/README.md)
+* [Javascipt 4](../../modules/javascript-4/README.md)
+* [Javascipt 5](../../modules/javascript-5/README.md)
 * [Homework]() need to add on modules

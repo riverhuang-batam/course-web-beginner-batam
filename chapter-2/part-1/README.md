@@ -2,5 +2,5 @@
 
 ---
 
-* [HTML 2](../../modules/html-2/README.md) it's copy from html-2 ... html-1 need split into html-2 also
+* [CSS 1](../../modules/css-1/README.md)
 * [Homework]() need to add on modules
