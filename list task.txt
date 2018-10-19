@@ -15,22 +15,12 @@ UX for web designer
 design software
 SEO
 
+
 impactbyte.com
 www.ruangkreasi.co
 https://www.handrichkongdro.com/
 https://thisisneat.com.au/
 http://www.creativereactionlab.com/
-
-
-
-
-javascript-1 must add from js-2
-js-2 must added from js-3
-js-3 must added from js-4
-add content for jquery-1
-jquery-2 is empty
-javascript-plugin-1 must add something
-ajax-1 must add something
 
 
 Handy SEO tools
