@@ -19,58 +19,61 @@ Introduction to code by learning, designing, and building website with mockup, H
 
 ## Chapter 2
 
-beginner CSS & beginner javascript 
+beginner CSS, beginner javascript, DOM 
 
 * on CSS we learn fundamentals, syntax, implementation, selectors, colors, size, box model, background, display, height & width, border, margin & padding, position.
 * on javaScript we learn fundamentals, implementation, data types, variable, arithmetic, comparison, build in object & methods, date
+* on DOM we learn common function we can use that already have on browser.
 
 ---
 
 ## Chapter 3
 
-intermediate CSS & beginner javascript
+intermediate CSS, beginner javascript, Basic REST API
 
 * on CSS we learn pseudo classes, web safe fonts, responsive & media query, flexbox
 * on javascript we learn style guide, block, conditional, loop
-
+* on basic REST API we learn how to connect & use other web service on internet
 ---
 
 ## Chapter 4
 
-javascript built-in functions and learn jQuery usage
+javascript built-in functions, REST API, Twitter Bootstrap CSS Framework
 
 * on javascript we learn array, string, math, object and timing
-* on jQuery we learn how to usage, selector, events and effects
+* on REST API we learn how to use it more powerfull & deeply
+* on Twitter Bootstrap we learn how to use & implement it in simple
 
 ---
 
 ## Chapter 5
 
-javascript function and Twitter Bootstrap CSS Framework
+Twitter Bootstrap CSS Framework, javascript plugins
 
-* on javascript we learn to create javascript function
-* on Twitter Bootstrap we learn how to use & implement it
+* on Twitter Bootstrap we learn more deeply and how to implement it
+* implement javascript plugin with less code & good result
 
 ---
 
 ## Chapter 6
 
-javascript plugin, web performance and SEO
+javascript plugin, web performance, SEO and introduction Reactjs
 
-* implement javascript plugin with less code & high website quality
+* we learn other javascript plugin that might be useful.
 * make website show quickly
 * make become no 1 on google search
+* create simple website using Reactjs
 
 ---
 
 ## Chapter 7
 
-Start to build final project
+learn more Reactjs and start to build final project
 
 ---
 
 ## Chapter 8
 
-Finish the final project until graduation
+Finish the final project, presentation and graduation
 
 ---
