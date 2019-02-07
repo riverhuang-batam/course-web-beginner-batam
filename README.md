@@ -29,7 +29,7 @@ Typical agenda that will run through in our onsite class.
 
 ## Learning Chapters
 
-* [Chapter 1](chapter-1/README.md): Introduction, Design, Git, Editor, HTML
+* [Chapter 1](chapter-1/README.md): Introduction, Git, Editor, HTML
 * [Chapter 2](chapter-2/README.md): CSS, Javascript, DOM
 * [Chapter 3](chapter-3/README.md): CSS, Javascript, REST API
 * [Chapter 4](chapter-4/README.md): Javascript, REST API, CSS Framework
