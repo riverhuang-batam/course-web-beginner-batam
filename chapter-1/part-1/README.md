@@ -3,5 +3,5 @@
 ---
 
 * [Introduction 1](../../modules/introduction/README.md)
-* [Design 1](../../modules/design-1/README.md)
+* [Git 1](../../modules/git-1/README.md)
 * [Homework](./homework/README.md)

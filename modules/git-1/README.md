@@ -4,53 +4,29 @@
 
 ## Git
 
-Git is source code management and used mostly by developers to manage their projects and collaborate with others.
+Git is source code management & used mostly by developers to manage their projects and collaborate with others.
 
 ### Installation
 
 ```sh
 # on ubuntu
-sudo apt install git tig
-# on mac
-brew install git tig
+sudo apt-get install git
+```
+if have problem / not detect git
+```sh
+sudo add-apt-repository ppa:git-core/ppa
 ```
 
-## Commands
+on windows go to [here](https://git-scm.com/download/win)
 
-Some basic Git commands are
+## first time
 
-`config`, `init`, `clone`, `add`, `commit`, `push`, `pull`
-
-Firstly after we installed Git in our computer, we should `config` it first with our name and email.
+we should `config` first with our name and email. This for as information on git about who you are.
 
 ```sh
 $ git config --global user.name "Your Full Name"
-$ git config --global user.email "yourname@gmail.com"
+$ git config --global user.email "yourname@example.com"
 ```
-
-We can initialize a new repo in an existing folder.
-
-```sh
-git init
-```
-
-We would like to create a new file, then add it into our repo.
-
-```sh
-$ ls
-README.md
-index.html
-
-$ git add README.md index.html
-```
-
-Then commit them with a message
-
-```sh
-$ git commit -m "Create README and HTML page"
-```
-
----
 
 ## GitHub
 
