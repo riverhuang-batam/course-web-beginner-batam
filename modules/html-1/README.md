@@ -4,13 +4,7 @@
 
 ## HTML (HyperText Markup Language)
 
-HTML is the main building blocks of a website.
-
-Usually have `.html` file extension.
-
-It structures the content, but not the style or functionality.
-
-That's why later we will need CSS and JavaScript.
+HTML is the main building blocks of a website. Usually have `.html` file extension. It structures the content what we see.
 
 ### Tag
 
@@ -28,23 +22,22 @@ There are various HTML elements based on our intention or usage on the web page:
 
 * For segmenting the web page: `doctype`, `html`, `head`, `body`
 * For meta data: `title`, `meta`
-* For text: `h1`-`h7`, `p`, `a`, `span`, `b`, `i`
+* For text: `h1`-`h6`, `p`, `a`, `span`, `b`, `i`
 * For visualizing: `img`, `button`
-* For dividing content: `div`, `main`, `section`, `article`, `aside`, `header`, `footer`, `nav`
+* For dividing content: `div`, `header`, `footer`, `nav`
 * For listing things: `ul`, `ol`, `li`
 * For creating a table: `table`, `thead`, `tbody`, `th`, `tr`, `td`
 * For form inputs: `form`, `label`, `input`, `fieldset`, `textarea`
-* For commenting: `<!-- comment -->`
-* For multimedia: `video`, `audio`, `iframe`
-
-You don't need to remember them all. Just use when you need it.
-Here is [complete html tag.](https://www.w3schools.com/tags/default.asp)
 
 ---
 
-## index HTML
+## create simple website
 
-To create an HTML page, create an `index.html` file in your editor. Then type in `index.html` file like below
+1. open your VS Code editor.
+2. click button `open folder`. find foler named `learn-reactjs` & add it.
+![](./assets/open-folder.png)
+
+To create an HTML page, open  create an `index.html` file in your editor. Then type in `index.html` file like below
 
 **Code:**
 

@@ -28,44 +28,6 @@ $ git config --global user.name "Your Full Name"
 $ git config --global user.email "yourname@example.com"
 ```
 
-## GitHub
-
-[GitHub](https://github.com) is the most popular platform to publish and collaborate on Git repositories.
-
-The followings are getting started step to use GitHub.
-
-1.  Register for a new user account
-2.  Create repository on GitHub with name `my-profile-web`
-3. Create new repository on our laptop in terminal / cmd with this command
-```sh
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/yourusername/my-profile-web.git
-git push-u origin master
-```
-
-or already existing repo in laptop
-
-```sh
-$ git remote add origin git@github.com:yourusername/my-profile-web.git
-$ git push -u origin master
-```
-
-When we want to push any changes later on, just use push right away.
-
-```sh
-$ git push
-```
-
-To get updates, pull it.
-
-```sh
-$ git pull
-```
-
----
-
 ## VS Code Source Control extension
 you can do git command by using Source Control.
 to do that.
