@@ -4,4 +4,8 @@
 
 * [Introduction 1](../../modules/introduction/README.md)
 * [Git 1](../../modules/git-1/README.md)
-* [Homework](./homework/README.md)
+* [Github 1](../../modules/github-1/README.md)
+* [Editor 1](../../modules/editor-1/README.md)
+* [HTML 1](../../modules/html-1/README.md)
+* [npm](../../modules/npm-1/README.md)
+* [http-server](../../modules/http-server/README.md)
