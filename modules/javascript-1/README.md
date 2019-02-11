@@ -23,25 +23,10 @@ https://developer.chrome.com/devtools
 Console is javascript feature that allows us to debug our javascript apps, there are many ways to do that but this is the fastest & easiest way.
 
 - `console.log()`
-- `console.error()`
-- `console.warn()`
 
 ---
 
 ## How to use javascript
-
-There 2 of ways to use JavaScript in your web app, You can embed it to your HTML, or import from another file
-
-### HTML + JavaScript
-
-`script` only:
-
-```html
-<script type="text/javascript">
-  // JavaScript code here
-  console.log("JavaScript");
-</script>
-```
 
 with `script src`:
 
@@ -61,14 +46,5 @@ console.log("JavaScript");
 
 - Guide
   - [JavaScript in 14 minutes](https://jgthms.com/javascript-in-14-minutes)
-  <!-- - [The Modern Javascript Tutorial on JavaScript.info](https://javascript.info) -->
-  <!-- - [JavaScript Enlightenment](http://javascriptenlightenment.com) -->
-  <!-- - [Eloquent JavaScript](https://eloquentjavascript.net) -->
-  <!-- - [freeCodeCamp](https://www.freecodecamp.org) -->
-<!-- - Cheatsheet
-  - [ES2015+ cheatsheet - DevHints.io](https://devhints.io/es6)
-  - [ES6 Syntax and Feature Overview – Tania Rascia](https://www.taniarascia.com/es6-syntax-and-feature-overview) -->
 - Tutorial
-  <!-- - [JavaScript documentation on DevDocs](http://devdocs.io/javascript) -->
   - [Javascript Tutorial on W3Schools](https://www.w3schools.com/js/default.asp)
-  - [Javascript Tutorial on TutorialsPoint](https://www.tutorialspoint.com/javascript/index.htm)
