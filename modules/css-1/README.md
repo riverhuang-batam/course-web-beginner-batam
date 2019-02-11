@@ -38,17 +38,17 @@ h1 {
 
 ## HTML + CSS
 
-There are four ways to use CSS into HTML.
+There are many ways to use CSS into HTML.
 
 ### 1`link` HTML tag
 
-HTML:
+on HTML:
 
 ```html
 <link rel="stylesheet" href="./index.css">
 ```
 
-CSS:
+on CSS:
 
 ```css
 /* CSS code here */
@@ -57,33 +57,7 @@ selector {
 }
 ```
 
-### 2 `style` HTML tag
-
-HTML:
-
-```html
-<head>
-  <title>Website</title>
-  <style>
-    /* CSS code here */
-    selector {
-      property: value;
-    }
-  </style>
-</head>
-```
-
-### 3 `@import` CSS declaration
-
-CSS:
-
-```css
-@import url("./other.css");
-
-/* CSS code here */
-```
-
-### 4 Inside HTML tag 
+### 2 Inside HTML tag 
 ###### (Not Recomended)
 
 ```html
@@ -98,7 +72,22 @@ CSS:
 
 CSS selectors define which HTML elements we want our styling to be applied to. There are many ways of targeting HTML elements using CSS selector.
 
-**1. Using Tag Selector**
+
+**1. Using Class Selector**
+
+```html
+<p class="date">
+  Saturday Feb 21
+</p>
+```
+
+```css
+.date {
+  /* Elements with date class */
+}
+```
+
+**2. Using Tag Selector**
 
 ```css
 a {
@@ -115,19 +104,6 @@ li {
 }
 ```
 
-**2. Using Class Selector**
-
-```html
-<p class="date">
-  Saturday Feb 21
-</p>
-```
-
-```css
-.date {
-  /* Elements with date class */
-}
-```
 
 **3. Using ID Selector**
 
@@ -169,15 +145,13 @@ p a {
 
 ## CSS Color Units
 
-Color in CSS can be in various format like its name, hex code, RGB, and HSL.
+Color in CSS has some formats like name & hex code.
 
 ```css
 .class {
   color: white; /* name */
   color: #ffffff; /* hex */
   color: #fff; /* hex */
-  color: rgb(255, 255, 255); /* rgb */
-  color: hsl(0, 0%, 100%); /* hsl */
 }
 ```
 
@@ -194,6 +168,8 @@ We can specify the `width` and `height` of the element using various format like
   margin: 2em;
 }
 ```
+
+`em` means `emphemeral unit` so size is relative to parent size. if parent have size 12px so child have 12px font size. if child have `font-size: 2em`, means the child size is 24px;
 
 ---
 
@@ -217,8 +193,6 @@ The background of an HTML element is what appears behind the text. We can set an
   background-color: blue;
   background-image: url(./images/impactbyte.png);
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: left bottom;
 }
 ```
 
@@ -337,6 +311,4 @@ There is another way to specify Padding and Margin.
 
 ## References
 
-- https://w3schools.com/css/default.asp
-- https://marksheet.io/css-basics.html
-- https://learn.shayhowe.com/html-css/getting-to-know-css
+- [https://w3schools.com/css/default.asp](https://w3schools.com/css/default.asp)
