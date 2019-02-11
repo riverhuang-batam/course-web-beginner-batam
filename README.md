@@ -8,10 +8,10 @@ Hello Students! Welcome to the  beginner web programming course from Impact Byte
 
 ## Learning Chapters
 
-* [Chapter 1](chapter-1/README.md): Introduction, Git, Github, Editor, HTML, npm, http-server, CSS, Javascript
-* [Chapter 2](chapter-2/README.md): Javascript, npm, React, Reactstrap, React Router
-* [Chapter 3](chapter-3/README.md): Javascript, React Lifecyle, React Transition, json-server, Axios
-* [Chapter 4](chapter-4/README.md): REST API, Redux, Facebook Login, React Atomic Design, Story books
+* [Chapter 1](chapter-1/README.md): Introduction, Git, Github, Editor, HTML, npm, CSS, Javascript
+* [Chapter 2](chapter-2/README.md): HTML, CSS, Javascript, React, Reactstrap
+* [Chapter 3](chapter-3/README.md): React Router, React Lifecyle, React Transition, json-server, Axios, REST API
+* [Chapter 4](chapter-4/README.md): Redux, Facebook Login, React Atomic Design, Story books, Web Performance
 * [Chapter 5](chapter-5/README.md): Redux, Web Performance, publish, Case Study Shoppee
 * [Chapter 6](chapter-6/README.md): Case Study Shoppee
 * [Chapter 7](chapter-7/README.md): Final Project
