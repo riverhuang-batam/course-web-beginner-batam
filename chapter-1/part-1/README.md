@@ -7,5 +7,4 @@
 * [Github 1](../../modules/github-1/README.md)
 * [Editor 1](../../modules/editor-1/README.md)
 * [HTML 1](../../modules/html-1/README.md)
-* [npm](../../modules/npm-1/README.md)
-* [http-server](../../modules/http-server/README.md)
+* [npm 1](../../modules/npm-1/README.md)
