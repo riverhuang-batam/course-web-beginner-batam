@@ -1,7 +1,7 @@
 # Part 1
 
 ---
-
-* [Javascript 5](../../modules/javascript-5/README.md)
-* [React Lifecycle 1](../../modules/react-lifecycle-1/README.md)
-* [Homework]() need to add on modules
+* [json-server 1](../../modules/json-server-1/README.md) need add modules
+* [Axios 1](../../modules/axios-1/README.md) need add modules
+* [REST API 1](../../modules/rest-api-1/README.md) need add modules
+* [Redux 1](../../modules/redux-1/README.md) need add modules
