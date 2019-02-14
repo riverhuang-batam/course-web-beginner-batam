@@ -10,7 +10,6 @@ Some of javascript array methods to do array operation or manipulation
 | `map`             | Creates a new array with the result of calling a function for each array element |
 | `find`            | Returns the value of the first element in an array that pass a test              |
 | `forEach`         | Calls a function for each array element                                          |
-| and many more ... | <https://goo.gl/cZL2ra>                                                          |
 
 ### `filter`
 

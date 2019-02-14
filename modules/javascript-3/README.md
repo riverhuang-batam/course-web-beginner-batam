@@ -119,8 +119,6 @@ Loops offer a quick and easy way to do something repeatedly
 | ---------- | ---------------------------------------------------------------- |
 | `for`      | loop through a block of code a number of times                   |
 | `for in`   | loop through the properties of an object                         |
-| `while`    | loop through a block of code while a specified condition is true |
-| `do while` | loop through a block of code while a specified condition is true |
 
 ### `for`
 
@@ -157,41 +155,4 @@ for (var x in person) {
 }
 
 // John Doe 25
-```
-
-### `while`
-
-```js
-while (condition) {
-    code block to be executed
-}
-```
-
-```js
-while (i < 5) {
-  text += i + ",";
-  i++;
-}
-
-// 0,1,2,3,4,
-```
-
-### `do while`
-
-```js
-do {
-    code block to be executed
-}
-while (condition);
-```
-
-```js
-var text = "";
-var i = 0;
-
-do {
-  text += i + ",";
-  i++;
-} while (i < 5);
-// 0,1,2,3,4,
 ```

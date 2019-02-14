@@ -1,228 +1,169 @@
-# JavaScript 10
+# JavaScript 10 (ES 6 / ES 2015)
 
 ---
 
-## Immediately Invoked Function Expression (IIFE)
-
-An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.
+## Classes
 
 ```js
-(function () { 
-        alert("I am an IIFE!");
-})();
 
-!function() {
-    alert("Hello from IIFE!");
-}();
-```
-
----
-
-### Callback Functions
-
-In Javascript, we can pass a function as an argument to another function. Then, the argument function can do a action as a callback function.
-
-```javascript
-//callback function example
-function logName(name) {
-  console.log(`My Name is ${name}`);
+class Circle extends Shape {
+  constructor (radius) {
+    this.radius = radius;
+  }
+  getArea() {
+    return Math.PI * 2 * this.radius
+  }
 }
 
-function insertCustomName(callback) {
-  var name = "Haidar";
-  callback(name);
-}
-
-insertCustomName(logName);
 ```
 
 ---
 
-## Promise
-
-What is promise?
-
-> Promise: Imagine you are a kid. Your mom promises you that she'll get you a new phone next week.
->
-> -- <cite>Jecelyn Yeen</cite>
-
-A promise has 3 states :
-
-1.  pending: initial state, neither fulfilled nor rejected.
-1.  fulfilled: meaning that the operation completed successfully.
-1.  rejected: meaning that the operation failed.
-
-### Creating promises
-
-We can create new promise using `Promise` built in object.
-If the promise is fulfilled, use `resolve()` to pass your success value. If the promise is rejected, use `reject()` to pass your fail value.
-
-After a proise is fulfilled/rejected, the success/faill falue will be hadled by `.then`/`.catch`.
-
-syntax:
+## Template Strings (backtick)
 
 ```js
-//creating promise
-var newPromise = new Promise(function(resolve, reject) {
-  // put your code here
-  //
-  //   resolve(someValue); // use resolve if promise is fulfilled
-  // or
-  //   reject("failure reason"); // use reject is promise is rejected
-});
 
-//using promise
-newPromise
-  .then(sucessValue => {
-    //do something with sucessValue
-  })
-  .catch(error => {
-    //do something with error
-  });
+let name = 'Budi';
+let sayHi = `hi my name is ${name}`;
+console.log(sayHi);
+
 ```
 
-### Basic Example
+---
 
-Don't forget to use `Error` built-in object because `.catch` will catch an error from reject.
+## Fat Arrow Functions
 
 ```js
-//try it yourself, and change the condition to true/false
-const condition = false;
+ const functionName1 = () => {
+   // do something here
+ }
 
-let myFirstPromise = new Promise((resolve, reject) => {
-  if (condition) {
-    resolve("fulfilled!");
-  } else {
-    const reason = new Error("rejected!");
-    reject(reason);
-  }
-});
+ // or 
 
-myFirstPromise
-  .then(successMessage => {
-    console.log(".then >>> " + successMessage);
-  })
-  .catch(error => console.log(".catch >>> " + error.message));
-//console output: .catch >>> rejected!
+ const functionName2 = (argument1) => {
+   // do something here
+ }
+
+// can become like below if has only one argument
+const functionName3 = argument1 => {
+   // do something here
+ }
+
+// can become like below if only one statement, this will return value
+const functionName4 = argument1 => `hi i'm argument1 with value ${argument1}`;
+// it can be intrepeted like this
+const functionName5 = argument1 => return `hi i'm argument1 with value ${argument1}`;
 ```
 
-### Advanced Example
+---
+
+## Destructuring
+
+### object matching 
 
 ```js
-//promise example from scotch.io (Jecelyn Yeen)
-const isMomHappy = false;
-
-// Promise
-const willIGetNewPhone = new Promise((resolve, reject) => {
-  // fat arrow
-  if (isMomHappy) {
-    const phone = {
-      brand: "Samsung",
-      color: "black"
-    };
-    resolve(phone);
-  } else {
-    const reason = new Error("mom is not happy");
-    reject(reason);
+  const object = {
+    name: 'Budi',
+    gender: 'Male',
+    live: 'Batam'
   }
-});
+  console.log(object);
 
-const showOff = function(phone) {
-  const message =
-    "Hey friend, I have a new " + phone.color + " " + phone.brand + " phone";
-  return Promise.resolve(message);
+  const { name, live } = object;
+  console.log(name, live) // Budi Batam
+```
+
+### can be used on parameter matching
+
+```js
+  const simpleFunction = ({name, gender}) => `hi my name is ${name}`
+  const greeting = simpleFunction(object)
+  console.log(greeting)
+```
+
+### object destructuring
+
+```js
+  const object = {
+    name: 'Budi',
+    gender: 'Male',
+    live: 'Batam'
+  }
+  const { name, ...newObject } = object;
+  console.log( name );        // "Budi"
+  console.log( newObject );   // { gender: "male", live: "Batam" }
+```
+
+---
+
+## Spread
+
+The Object spread operator lets you build new objects from other objects
+
+```js
+const person1 = {
+  name: 'Omni Knight',
+  class: 'Support',
+  level: 21
 };
 
-// call our promise
-const askMom = function() {
-  willIGetNewPhone
-    .then(showOff)
-    .then(fulfilled => console.log(fulfilled)) // fat arrow
-    .catch(error => console.log(error.message)); // fat arrow
+const person2 = {
+  ...person1,
+  name: 'Tider Hunter'
 };
 
-askMom();
+console.log(person2);   // { name: "Tide Hunter", class: "Support", level: 21}
 ```
 
 ---
 
-# Async Await (async/await)
-
-* [dotJS 2017 - Wes Bos - Async + Await](https://www.youtube.com/watch?v=9YkUCxvaLEk)
-
-## Async
-
-Async is a modification of `Promise` syntax, you can write `Promise` with `async` syntax easier.
-
-The return value of an async function is recognized as a promise `resolve()`
-
-example:
+## Objects
 
 ```js
-//this async
-async function myAsyncFunction() {
-  return "theValue";
-}
-
-//is equal to
-function myAsyncFunction() {
-  return Promise.resolve("theValue");
-}
-
-//so you can call it like this
-myAsyncFunction().then(returnedVal => console.log(returnedVal));
-//console output: theValue
+module.exports = { hello, bye }
+// same as : module.exports = { hello: hello, bye: bye }
 ```
 
-And the throw of an async function is recognized as a promise `reject()`
-
 ```js
-//this
-async function my2ndAsyncFunction() {
-  throw "error";
-}
-
-//is equal to
-function my2ndAsyncFunction() {
-  return Promise.reject("error");
-}
-
-//so you can call it like this
-my2ndAsyncFunction().catch(err => console.log(err));
-//console output: error
-```
-
-## Await
-
-Await is only used with an async function. The await keyword is used in an async function to ensure that all promises returned in the async function are synchronized.
-
-```js
-async function myDate() {
-  try {
-    let dateDetails = await date;
-    let message = await orderUber(dateDetails);
-    console.log(message);
-  } catch (error) {
-    console.log(error.message);
+const App = {
+  start() {
+    console.log('running')
   }
 }
+// same as : App = { start : function () {...} }
 ```
-
-References :
-
-https://scotch.io/tutorials/javascript-promises-for-dummies
-https://scotch.io/courses/10-need-to-know-javascript-concepts/callbacks-promises-and-async#async-and-await
 
 ---
 
-## `apply`, `call`, `bind`
+## Modules
 
-<!--
-* Prevent regression
-* Abstraction
-* Decomposition
-* Method chaining
-* Data parsing and serialization
-* Hoisting, Closures, Prototypes
-* Function inside function, return object with function
--->
+### Imports
+
+```js
+import 'helpers'
+
+import Express from 'express'
+// same as: const Express = require('...').default || require('...')
+
+import { indent } from 'helpers'
+// same as: const indent = require('...').indent
+
+import * as Helpers from 'helpers'
+// same as: const helpers = require('...')
+
+import { indentSpaces as indent } from 'helpers'
+// same as: const indent = require('...').indentSpace
+```
+
+### Exports
+
+```js
+export default function () { ... }
+// same as: module.exports.default = ...
+
+eport function myMethod() { ... }
+// same as: module.export.mymethod = ...
+
+expot const pi = 3.14159;
+// same as: module.exports.pi = ...
+```
