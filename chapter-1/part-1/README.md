@@ -8,3 +8,4 @@
 * [Editor 1](../../modules/editor-1/README.md)
 * [HTML 1](../../modules/html-1/README.md)
 * [npm 1](../../modules/npm-1/README.md)
+* [practice 1](./practice/README.md)

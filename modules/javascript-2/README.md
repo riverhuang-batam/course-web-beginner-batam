@@ -47,8 +47,6 @@ let p = {
   array: ["a", 1, true, undefined, null]
 };
 
-// This is a comment line
-
 /*
 This is a
 multiple comment line
@@ -67,9 +65,7 @@ Examples:
 
 ```js
 var x = ""; // can be changed later
-
 let y = ""; // can be changed later
-
 const z = ""; // cannot be changed later
 ```
 
@@ -85,15 +81,10 @@ Examples:
 
 ```js
 let a = 2 + 2;
-
 let b = 3 - 2;
-
 let c = 3 * 3;
-
 let d = 4 / 2;
-
-let e = 7 % 2; // result:1
-
+let e = 7 % 2; // result:1  . % we call it modulus
 let f = 3 * 2 + 1; // result:7
 ```
 
@@ -161,9 +152,7 @@ var result = Math.round(4.4); // result: 4
 ```js
 // Date
 var result = new Date(); // result: [current date]
-
 var result = new Date("October 13, 2018 11:13:00"); // result: Tue Mar 27 2018 11:13:00 GMT+0700 (WIB)
-
 var year = result.getFullYear(); //year: 2018
 ```
 
@@ -197,11 +186,13 @@ In JavaScript, Date object is a bit special. It has built in methods to manipula
 
 ---
 
+## use other libraries to ease our code
+
+* [numeral.js](http://numeraljs.com/) formatting & manipulating numbers.
+* [moment.js](https://momentjs.com/) parse, validate, manipulate & display date and time.
+
 ## References
 
 - Guide
-  - [JavaScript in 14 minutes](https://jgthms.com/javascript-in-14-minutes)
-
-- Tutorial
-  - [Javascript Tutorial on W3Schools](https://www.w3schools.com/js/default.asp)
-  - [Javascript Tutorial on TutorialsPoint](https://www.tutorialspoint.com/javascript/index.htm)
+  - [String Methods](https://www.w3schools.com/js/js_string_methods.asp)
+  - [Number Methods](https://www.w3schools.com/js/js_number_methods.asp)

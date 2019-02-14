@@ -4,11 +4,7 @@
 
 ## What's is JavaScript
 
-Javascript is a popular programming language that usually used to build web application rapidly.
-
-## History
-
-- ES5, ES6, ES7, ES+, ES Next
+Javascript is a programming language who can make web application interaction more lively to user.
 
 ---
 
@@ -20,13 +16,13 @@ https://developer.chrome.com/devtools
 
 ## Console
 
-Console is javascript feature that allows us to debug our javascript apps, there are many ways to do that but this is the fastest & easiest way.
+print message on webdev tools.
 
-- `console.log()`
+- `console.log('show data')`
 
 ---
 
-## How to use javascript
+## How to use
 
 with `script src`:
 

@@ -23,4 +23,4 @@ when we install nodejs, it's intall also npm. click [here](https://nodejs.org/en
   * on CLI type `http-server`
   * it will give us message to open our browser with address & port they give it. so do it.
 
-### 2. we'll use reactjs module & friends
+### 2. we'll use on reactjs modules

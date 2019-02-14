@@ -54,52 +54,9 @@ With 4 coordinates properties:
 
 ---
 
-## CSS Pseudo Classes
-
-Pseudo Classes is attached to selector. The pseudo-class will only define a particular state of that selector.
-
-Some of popular Pseudo Classes are:
-
-- :hover
-- :visited
-
-example:
-
-```css
-/* :hover example */
-#example1 {
-  color: blue;
-}
-
-#example1:hover {
-  color: red;
-}
-
-/* :visited example */
-a {
-  color: blue;
-}
-a:visited {
-  color: red;
-}
-
-/* :focus example */
-.form-input {
-  border: 2px solid grey;
-  padding: 5px;
-}
-.form-input:focus {
-  background: lightyellow;
-  border-color: blue;
-  outline: none;
-}
-```
-
----
-
 ## CSS Web Safe Fonts
 
-The font-family property should hold several font names as a "fallback" system, to ensure maximum compatibility between browsers/operating systems. **If the browser does not support the first font, it tries the next font**.
+The font-family property should hold several font names as a "fallback" system, to ensure maximum compatibility between browsers/ OS. **If the browser does not support the first font, it tries the next font**.
 
 Start with the font you want, and end with a generic family, to let the **browser pick a similar font in the generic family**, **if no other fonts are available**
 
@@ -116,38 +73,6 @@ Example:
 #### references
 * [common fonts used](https://websitesetup.org/web-safe-fonts-html-css)
 * [google fonts](https://fonts.google.com/)
-
----
-
-## CSS Responsiveness with Media Query
-
-![responsive web design, animated](https://media.giphy.com/media/b2CD0Qrq2ulwY/giphy.gif)
-
-Media queries are useful when you want to modify your site or app depending on a device's general type (such as print vs. screen) or specific characteristics and parameters (such as screen resolution or browser viewport width).
-
-Media queries are used for the following:
-
-- To conditionally apply styles with the CSS `@media` and `@import` at-rules.
-- To target specific media for the `<link>`, `<source>`, and other HTML elements.
-
-```css
-// Extra small devices (portrait phones, less than 576px)
-// No media query since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-```
-
-https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
 
 ---
 
@@ -220,6 +145,3 @@ Result:
 
 * <https://css-tricks.com/snippets/css/a-guide-to-flexbox>
 * <http://flexboxfroggy.com>
-* https://w3schools.com/css/default.asp
-*  https://marksheet.io/css-basics.html
-*  https://learn.shayhowe.com/html-css/getting-to-know-css

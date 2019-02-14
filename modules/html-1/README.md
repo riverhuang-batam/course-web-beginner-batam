@@ -27,7 +27,7 @@ There are various HTML elements based on our intention or usage on the web page:
 * For dividing content: `div`, `header`, `footer`, `nav`
 * For listing things: `ul`, `ol`, `li`
 * For creating a table: `table`, `thead`, `tbody`, `th`, `tr`, `td`
-* For form inputs: `form`, `label`, `input`, `fieldset`, `textarea`
+* For form inputs: `form`, `label`, `input`, `textarea`
 
 ---
 
