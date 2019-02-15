@@ -1,5 +1,23 @@
 # React 1
 
+## Installation
+
+1. open our `command line interface` or `CLI`
+2. type `sudo npm install create-react-app -g`
+      * `sudo` in linux is do something as admin
+      * `--g` it's option that will be add globaly'
+3. go to inside folder `learn-reactjs` where we already create via git before. [previous lession github-1](./../github-1/README.md)
+4. type `create-react-app ./`. the `./` means will setup reactjs in current folder.
+5. after done, there's list of commands that we can do. we can do on VS code. to do that type `code .` (including dot). will show VS code with current folder that we used on CLI.
+
+## On VS Code
+1. On explorer menu there folders & files.
+    
+    ![](./assets/folders_files.png)
+
+2. Press `CTRL + ~`. Will show terminal menu on below.
+3. Type `sudo npm run start` to show our first react app running.
+
 - ▢ Website Structure
   - Think in component
 - ▢ React
