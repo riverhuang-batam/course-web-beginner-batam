@@ -7,5 +7,6 @@
 * [Javascript 6](../../modules/javascript-6/README.md)
 * [Javascript 7](../../modules/javascript-7/README.md)
 * [Javascript 8](../../modules/javascript-8/README.md)
-* [React 1](../../modules/react-1/README.md)    write the content
-* [Reactstrap 1](../../modules/reactstrap-1/README.md)  write the content
+* [React 1](../../modules/react-1/README.md)
+* [Reactstrap 1](../../modules/reactstrap-1/README.md)
+* [Practice](./practice/README.md)

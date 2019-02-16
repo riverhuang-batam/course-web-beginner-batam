@@ -10,7 +10,18 @@
 4. type `create-react-app ./`. the `./` means will setup reactjs in current folder.
 5. after done, there's list of commands that we can do. we can do on VS code. to do that type `code .` (including dot). will show VS code with current folder that we used on CLI.
 
+example on CLI
+
+```sh
+create-react-app example
+cd example
+npm start
+```
+
+--- 
+
 ## On VS Code
+
 1. On explorer menu there folders & files.
     
     ![](./assets/folders_files.png)
@@ -18,18 +29,17 @@
 2. Press `CTRL + ~`. Will show terminal menu on below.
 3. Type `sudo npm run start` to show our first react app running.
 
-- ▢ Website Structure
-  - Think in component
-- ▢ React
-  - Who uses React?
-  - The main reasons and philosophy
-  - vs jQuery, Vue, Angular, Preact, Web Components, Elm, etc
-  - Creating components and writing HTML with `class` in JSX (JavaScript Extension)
-  - JSX is a DSL (Domain Specific Language) over JavaScript
-  - React lifecycle (`componentWillMount`, `render`, `componentDidMount`)
-- ▢ React Installation
-  - `npm install -g create-react-app`
-  - `create-react-app` project structure
+## How it Works
+
+1. `npm run start` what it's mean?. 
+   `npm run` command lets we define custom scripts in our `package.json` and `start` is for we run command on package.json on field `scripts` and `on field `start` whichs value is `react-scripts start`
+   
+   the `react-scripts` have `webpack module bundler` and `Bable Js Transpiler`.
+
+
+<!-- ### References
+
+- [`create-react-app`](https://npm.im/create-react-app) installer
 - ▢ React Component `class` vs stateless component
   - Building blocks of React, `react`, `react-dom`
   - Import modules or another components
@@ -59,46 +69,6 @@
   - Stateless functional components
   - Component-based development
   - Parent and child relationship between components
-  - Build system with Webpack
-  - Transpilation with Babel
-
----
-
-# React.js UI Library
-
-React is described as a JavaScript library for building user interfaces (taken from the [official documentation](https://reactjs.org)).
-
-With 3 main features:
-
-- Declarative: React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable and easier to debug.
-- Component-Based: Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
-- Learn Once, Write Anywhere: We don’t make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code. React can also render on the server using Node and power mobile apps using [React Native](https://facebook.github.io/react-native).
-
----
-
-## Website Structure
-
-Let's think in component-based design and development.
-
----
-
-## React Basics
-
-Who uses React? A lot. Especially Facebook, Instagram, Airbnb, etc.
-
-The main reasons and philosophy of React is to improve both developer and designer productivity, by using a component-based approach when building a complex web application.
-
-The important thing about React is that it uses: Component and virtual DOM.
-
-What if we compare React vs jQuery, Vue, Angular, Preact, Backbone, Web Components, Elm, etc?
-
-By convention, creating components and writing HTML in React is using JSX (JavaScript Extension) syntax.
-
-The main component can be either written using `class` or plain `function`.
-
-JSX is a DSL (Domain Specific Language) over JavaScript. So it's not plain programming language.
-
-Should we always React? Depends. If our application has some complexity, it's recommended. But if it's just a simple website, just use plain HTML, CSS, JavaScript & jQuery like usual.
 
 ---
 
@@ -117,48 +87,7 @@ return (
 )
 ```
 
-in plain JavaScript:
-
-```js
-return React.createElement(
-  "div",
-  null,
-  React.createElement("h1", { className: "app-title" }, "App Name"),
-  React.createElement("p", null, todoList)
-)
-```
-
-To configure Emmet so it will work with JSX, you have to add these to your User Settings (in VS Code).
-
-```js
-{
-  // ...
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
-  "emmet.syntaxProfiles": {
-    "javascript": "jsx"
-  },
-  "emmet.triggerExpansionOnTab": true,
-  //...
-}
-```
-
 ---
-
-## React Installation
-
-To quickly learn React, we can use `create-react-app` installer.
-
-```sh
-npm install -g create-react-app
-```
-
-```sh
-create-react-app example
-cd example
-npm start
-```
 
 `create-react-app` project structure:
 
@@ -322,9 +251,9 @@ If we want to use a parameter in the method, don't call it directly.
 ;<div onClick={this.actionName(param)} />
 ```
 
----
+--- -->
 
-## React Toolkit
+<!-- ## React Toolkit
 
 Browser Extensions:
 
@@ -351,9 +280,9 @@ Build system with Webpack.
 
 Transpilation with Babel.
 
----
+--- -->
 
-## Glossary
+<!-- ## Glossary
 
 - JSX — Allows us to write HTML like syntax which gets transformed to lightweightJavaScript objects.
 - Virtual DOM — A JavaScript representation of the actual DOM.
@@ -365,17 +294,17 @@ Transpilation with Babel.
 - `setState` — A helper method used for updating the state of a component and re-rendering the UI
 - `props` — The data which is passed to the child component from the parent component.
 - `propTypes` — Allows you to control the presence, or types of certain props passed to the child component.
-- `defaultProps` — Allows you to set default props for your component.
+- `defaultProps` — Allows you to set default props for your component. -->
 
-### Component LifeCycle
+<!-- ### Component LifeCycle
 
 - `componentWillMount` — Fired before the component mounted/rendered
 - `render` - Fired when the actual UI mounted/rendered/changed
 - `componentDidMount` — Fired after the component mounted
 - `componentWillUnmount` — Fired before the component will unmount
-- `getDerivedStateFromProps` - Fired when the component mounts and whenever the props change. Used to update the state of a component when its props change
+- `getDerivedStateFromProps` - Fired when the component mounts and whenever the props change. Used to update the state of a component when its props change -->
 
-### Event Handling with Custom Method
+<!-- ### Event Handling with Custom Method
 
 - `onClick`
 - `onSubmit`
@@ -397,62 +326,4 @@ With parameter, we call the function directly so we need to wrap it inside a fun
     this.actionName(param)
   }}
 />
-```
-
----
-
-## References
-
-### Essentials
-
-- [React - A JavaScript library for building user interfaces](https://facebook.github.io/react)
-- [Official React Tutorial: Intro To React](https://reactjs.org/tutorial/tutorial.html)
-- [React Enlightenment](https://www.reactenlightenment.com)
-- [Build with React JS Tutorial](http://buildwithreact.com)
-- [React Tutorial: A Comprehensive Guide to learning React.js in 2018 - Tyler McGinnis](https://tylermcginnis.com/reactjs-tutorial-a-comprehensive-guide-to-building-apps-with-react)
-- [Start Learning React - egghead.io](https://egghead.io/courses/start-learning-react)
-- [Learn ReactJS: Part I | Codecademy](https://www.codecademy.com/courses/react-101/lessons/react-jsx-intro/exercises/why-react)
-- [`react-howto` - Your guide to the (sometimes overwhelming!) React ecosystem](https://github.com/petehunt/react-howto)
-- [Top 5 Tutorials for Getting Started with React](https://www.javascriptstuff.com/getting-started-tutorials)
-
-### Course
-
-- [Learn React by building an app to help you find the best movie to watch](https://sweetpumpkins.codecamps.com)
-- [Fullstack React: 30 Levels of React](https://fullstackreact.com/30-days-of-react)
-- [Fullstack React 🐬 Book - The Complete Guide to ReactJS and Friends](https://fullstackreact.com)
-- [React Nanodegree by Udacity](https://udacity.com/degrees/react-nanodegree--nd019)
-
-### Additionals
-
-- [React Armory - The simplest way to learn React](https://reactarmory.com/)
-  - [Lifecycle Simulators](https://reactarmory.com/guides/lifecycle-simulators)
-- [Pure React](https://daveceddia.com/pure-react)
-  - [Your Timeline for Learning React](https://daveceddia.com/timeline-for-learning-react)
-  - [How To Learn React (and what to build along the way)](https://daveceddia.com/how-to-learn-react)
-  - [Learning React? Start Small](https://daveceddia.com/learning-react-start-small)
-  - [Learning React as an Experienced Developer](https://daveceddia.com/learn-react-as-experienced-developer)
-  - [A Visual Guide to State in React](https://daveceddia.com/visual-guide-to-state-in-react)
-  - [AJAX Requests in React: How and Where to Fetch Data](https://daveceddia.com/ajax-requests-in-react)
-  - [Do I need Node.js in the backend?](https://daveceddia.com/do-i-need-nodejs-backend-for-react-angular)
-- [Build with React](http://buildwithreact.com)
-- [reactstrap - React Bootstrap 4 components](https://reactstrap.github.io/)
-- [Cabin: Thoroughly Learn React and Redux with this example app](http://cabin.getstream.io)
-- [8 Key React Component Decisions – freeCodeCamp](https://medium.com/@housecor/8-key-react-component-decisions-cc965db11594)
-- [React For Beginners - Learn with Video Tutorials](https://reactforbeginners.com)
-- [Stop Using React for EVERYTHING!](https://medium.com/@zackargyle/stop-using-react-for-everything-c8297ac1a644)
-- [React Tinkerer Manual](https://github.com/adhywiranata/react-tinkering-manual)
-- [React HMR with `create-react-app`](https://daveceddia.com/hot-reloading-create-react-app)
-
-### In Bahasa Indonesia
-
-- [Video Tutorial: React untuk Pemula | DumbWays.id - Screencast](https://dumbways.id/p/react-untuk-pemula)
-- [React Dasar](https://www.idrails.com/series/react-dasar)
-
-### Directory and Packages
-
-- [Awesome React - A collection of awesome things regarding React ecosystem](https://github.com/enaqx/awesome-react)
-- [JS.coach](https://js.coach)
-- [React.parts – A catalog of React components](https://react.parts)
-- [React Hot Loader - Tweak React components in real time](http://gaearon.github.io/react-hot-loader)
-  - [`react-app-rewire-hot-loader` - Add the `react-hot-loader` to your `create-react-app` app via `react-app-rewired`](https://daveceddia.com/hot-reloading-create-react-app)
-  - [Hot reloading with `create-react-app` without ejecting 🔥 ⏏️](https://medium.com/@brianhan/hot-reloading-cra-without-eject-b54af352c642)
+``` -->
