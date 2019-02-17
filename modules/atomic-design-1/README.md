@@ -88,10 +88,24 @@ Is where you will put mostly (but not exclusively) organisms:
 
 ### Atoms
 
-### Molecules
+![](./assets/label.png)
 
-### Organisms
+![](./assets/input.png)
 
-### Templates
+![](./assets/button.png)
 
-### Pages
+### Molecule
+
+![](./assets/molecule.png)
+
+### Organism
+
+![](./assets/organism.png)
+
+### Template
+
+![](./assets/template.png)
+
+### Page
+
+![](./assets/page.png)
