@@ -9,11 +9,15 @@
 3. Usually data gets from parent component. 
 4. The only way to change props is changed from parent component.
 
+---
+
 ## What's State
 
 1. Places data can be changed.
 2. If state data changed, will call render function to update rendering elements.
 3. State can sent data to children components by setting props to the components.
+
+---
 
 ## Example State & Props
 
