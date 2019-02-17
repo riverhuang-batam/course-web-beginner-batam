@@ -9,9 +9,9 @@ Hello Students! Welcome to the  beginner web programming course from Impact Byte
 ## Learning Chapters
 
 * [Chapter 1](chapter-1/README.md): Introduction, Git, Github, Editor, HTML, npm, CSS, Javascript
-* [Chapter 2](chapter-2/README.md): Javascript, React, Reactstrap, React Props State, React Lifecycle, React Router
-* [Chapter 3](chapter-3/README.md): json-server, Axios, REST API, Redux, React Atomic Design, Story Book
-* [Chapter 4](chapter-4/README.md): reactable, , react-burger-menu, react-ladda, react-slick, recharts, react-facebook, react-datepicker, react-paginate, react-image-gallery, rc-calendar, react-beautiful-dnd
+* [Chapter 2](chapter-2/README.md): Javascript, React, Reactstrap, Atomic Design, Story Book, React Props State
+* [Chapter 3](chapter-3/README.md): React Lifecycle, React Router, json-server, Axios, REST API, Redux
+* [Chapter 4](chapter-4/README.md): reactable, react-burger-menu, react-ladda, react-slick, recharts, react-facebook, react-datepicker, react-paginate, react-image-gallery, rc-calendar, react-beautiful-dnd
 
 <!-- react-notification-system, react-player, google-map-react, -->
 * [Chapter 5](chapter-5/README.md): Case Study Shoppee
