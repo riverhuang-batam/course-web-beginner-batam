@@ -4,7 +4,7 @@
 
 ## Introduction
 
-management all states in one place for react.
+official redux for react.
 
 ---
 
@@ -14,29 +14,47 @@ management all states in one place for react.
 
 ---
 
-## Information
-
-before we dive to react redux, we need to understand basic redux first
-
----
-
-## Redux
-
-### Actions
-
-### Action Creators
-
-### Reducers
-
-### Store
-
+## Usage
 
 ### Provider
 
 Makes Redux store available to the rest of our app.
 
+```js
+import { Provider } from 'react-redux'
+import { createStore } from 'redux';
+
+import rootReducer from './reducers';
+import App from './components/pages/App';
+
+const store = createStore(rootReducer)
+
+render (
+    <Provider store={store}>
+        <App />
+    </Provider>
+)
+
+
+```
+
 ### Connect
 
 To connect our component to the store
 
+```js
+import { connect } from 'react-redux';
+import { increment, decrement, reset } from './actionCreators';
 
+// const Counter = ...
+
+const mapStateToProps = (state /*, ownProps*/) => {
+  return {
+    counter: state.counter
+  }
+}
+
+const mapDispatchToProps = { increment, decrement, reset }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Counter)
+```
