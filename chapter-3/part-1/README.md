@@ -5,4 +5,4 @@
 * [json-server 1](../../modules/json-server-1/README.md)
 * [Axios 1](../../modules/axios-1/README.md)
 * [REST API 1](../../modules/rest-api-1/README.md)
-* [Redux 1](../../modules/redux-1/README.md) need add modules
+* [Practice](./practice/README.md)
