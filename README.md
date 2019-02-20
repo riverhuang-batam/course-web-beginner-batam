@@ -14,8 +14,8 @@ Hello Students! Welcome to the  beginner web programming course from Impact Byte
 * [Chapter 4](chapter-4/README.md): React Redux, react-slick, recharts, react-facebook-login, react-datepicker, react-paginate, react-image-gallery, rc-calendar, react-beautiful-dnd
 
 <!-- react-notification-system, react-player, google-map-react, -->
-* [Chapter 5](chapter-5/README.md): Case Study Shoppee
-* [Chapter 6](chapter-6/README.md): Case Study Shoppee
+* [Chapter 5](chapter-5/README.md): Case Study Shopee
+* [Chapter 6](chapter-6/README.md): Case Study Shopee
 * [Chapter 7](chapter-7/README.md): Final Project
 * [Chapter 8](chapter-8/README.md): Final Project, Presentation
 
