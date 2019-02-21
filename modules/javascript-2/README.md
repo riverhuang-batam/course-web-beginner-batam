@@ -8,49 +8,41 @@ In JavaScript, there are several data types:
 
 - `String`: is a text or set of characters
 - `Number`: is a numeric types
-- `Boolean`: is a data types that represents one or two value: true or false.
-- `Array`: is a data type that used to store multiple values in a single variable.
-- `Object` with `key` & `value`: is a data type that used to store a information of multiple values like a real life object
-- `JSON`: is a is a lightweight data-interchange format. Using JavaScript `Object` Notation format
+- `Boolean`: represents one or two value: true or false.
+- `Array`: store multiple values in a single variable.
+- `Object` with `key` & `value`: used to store a information of multiple values
+- `JSON`: JavaScript Object Notation. it's same with `Object`
 
 Examples:
 
 ```js
 // String
-let a = "this is a string";
-let b = "another string";
-let c = `${a} and ${b}`; // result: this is a string and another string
+let string1 = "this is a string";
+let string2 = "another string";
+let string3 = `${string1} and ${string2}`; // result: this is a string and another string
 
 // Number
-var d = 2;
-var d = 2.24;
-var d = 2 + 2; // result: 4
-var d = 1 + 2 / 4; // result: 1.5
+let decimal1 = 2;
+let decimal2 = 2.24;
+let decimal3 = 2 + 2; // result: 4
+let decimal4 = 1 + 2 / 4; // result: 1.5
 
 // Boolean
-let e = true;
+let isTrue = true;
 
 // Array
-let f = ["a", 1, true, undefined, null];
-f[0]; // result: "a"
-f[1]; // result: 1
-f[4]; // result: null
-f.length; // result: 5
+let info = ["first", 100, 200, true, "last"];
+info[0]; // result: "first"
+info[1]; // result: 100
+info[4]; // result: last
+info.length; // result: 5
 
 // Object
-let p = {
-  number: 1,
-  string: "This is String",
-  boolean: true,
-  undefined: undefined,
-  null: null,
-  array: ["a", 1, true, undefined, null]
+let person = {
+  id: 1,
+  name: "Budi",
+  info: info
 };
-
-/*
-This is a
-multiple comment line
-*/
 ```
 
 ---
@@ -59,12 +51,9 @@ multiple comment line
 
 Variable is a way to store a value that can be used later.
 
-There are three ways to declare a variable.
-
 Examples:
 
 ```js
-var x = ""; // can be changed later
 let y = ""; // can be changed later
 const z = ""; // cannot be changed later
 ```
@@ -80,12 +69,10 @@ Arithmetic operators are used to perform arithmetic between variables and/or val
 Examples:
 
 ```js
-let a = 2 + 2;
-let b = 3 - 2;
-let c = 3 * 3;
-let d = 4 / 2;
-let e = 7 % 2; // result:1  . % we call it modulus
-let f = 3 * 2 + 1; // result:7
+let plus = 2 + 2;
+let minus = 3 - 2;
+let modulus = 7 % 2; // result:1  . % we call it modulus
+let multiple = 3 * 2 + 1; // result:7
 ```
 
 ### Comparison
@@ -95,43 +82,24 @@ Comparison operator is used to compare between two value and generate result bet
 Examples:
 
 ```js
-var number = 7
+let number = 7
 
-var result = (number == 7) // result: true
-var result = (number == 99) // result: false
-var result = (number == "7") // result:t rue
+let result = number == 7 // result: true
+result = number === 7 // result: true
+result = number == "7" // result: true
 
-var result = (number === 7) // result: true
-var result = (number === "7") // result: false
+result = number != 7 // result: false
+result = number ==="7" // result: false
 
-var result = !true // result: false
+result = !true // result: false
 
-var result = (number != 7) // result: false
-var result = (number != 99) // result: true
-var result = (number != "7") // result: false
+result = true && false // result: false
+result = true && true // result: true
 
-var result = (number !== 7) // result: true
-var result = (number !== "7") // result: false
-var
-var result = (number > 7)// result: false
-var result = (number > 6)// result: true
+result = true || false // result: true
+result = true || true // result: true
 
-var result = (number >= 7)// result: true
-var result = (number >= 6)// result: true
-
-var result = (number < 7)// result: false
-var result = (number < 6)// result: false
-
-var result = (number <= 7)// result: true
-var result = (number <= 6)// result: false
-
-var result = (true && false)// result: false
-var result = (true && true)// result: true
-
-var result = (true || false)// result: true
-var result = (true || true)// result: true
-
-var result = undefined || "string"// result: String
+result = undefined || "string"// result: String
 ```
 
 ---
@@ -144,55 +112,31 @@ Examples:
 
 ```js
 // Math
-var result = Math.PI; // result: 3.141592653589793
-var result = Math.round(4.7); // result: 5
-var result = Math.round(4.4); // result: 4
+let result = Math.PI; // result: 3.141592653589793
+result = Math.round(4.7); // result: 5
+result = Math.round(4.4); // result: 4
 ```
 
 ```js
 // Date
-var result = new Date(); // result: [current date]
-var result = new Date("October 13, 2018 11:13:00"); // result: Tue Mar 27 2018 11:13:00 GMT+0700 (WIB)
-var year = result.getFullYear(); //year: 2018
+let result = new Date(); // result: [current date]
+let year = result.getFullYear(); //year: 2018
 ```
 
 ```js
 // Array
-var alphabet = ["a", "b", "c", "d"];
+let alphabet = ["a", "b", "c", "d"];
 
-var result = alphabet.toString(); // result: a,b,c,d
-var result = alphabet.join("_"); // result: a_b_c_d
-var result = alphabet.length(); // result: 5
-var result = alphabet.includes("a"); // result: true
-var result = alphabet.push("e"); // result: 5, with alphabet being ["a", "b", "c", "d", "e"]
-var result = alphabet.pop(); // result: e, with alphabet being ["a", "b", "c", "d"] again
+let result = alphabet.join("_"); // result: a_b_c_d
+result = alphabet.length(); // result: 5
+result = alphabet.includes("a"); // result: true
+result = alphabet.push("e"); // result: 5, with alphabet being ["a", "b", "c", "d", "e"]
+result = alphabet.pop(); // result: e, with alphabet being ["a", "b", "c", "d"] again
 ```
 
 ## JavaScript Date Methods
-
-In JavaScript, Date object is a bit special. It has built in methods to manipulate Date object, and here is the example...
-
-| Method            | Description                                       |
-| ----------------- | :------------------------------------------------ |
-| getDate()         | Get the day as a number (`1`-`31`)                |
-| getDay()          | Get the weekday as a number (`0`-`6`)             |
-| getFullYear()     | Get the four digit year (`yyyy`)                  |
-| getHours()        | Get the hour (`0`-`23`)                           |
-| getMilliseconds() | Get the milliseconds (`0`-`999`)                  |
-| getMinutes()      | Get the minutes (`0`-`59`)                        |
-| getMonth()        | Get the month (`0`-`11`)                          |
-| getSeconds()      | Get the seconds (`0`-`59`)                        |
-| getTime()         | Get the time (milliseconds since January 1, 1970) |
-
----
 
 ## use other libraries to ease our code
 
 * [numeral.js](http://numeraljs.com/) formatting & manipulating numbers.
 * [moment.js](https://momentjs.com/) parse, validate, manipulate & display date and time.
-
-## References
-
-- Guide
-  - [String Methods](https://www.w3schools.com/js/js_string_methods.asp)
-  - [Number Methods](https://www.w3schools.com/js/js_number_methods.asp)
