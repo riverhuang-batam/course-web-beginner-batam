@@ -4,7 +4,7 @@
 
 ## NPM (Node Package Manager)
 
-it's used for reuse other code / program / module shared by developer. so we don't need to struggle to code, just use other who already make it and we only code what it's matter for use that anybody not yet make it.
+it's used for use other code / program / module by other developer.
 
 ## Installation
 
