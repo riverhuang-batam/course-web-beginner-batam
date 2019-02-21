@@ -4,7 +4,7 @@
 
 ## CSS (Cascading Style Sheet)
 
-CSS is a way to style HTML page to beautiful. Usually have `.css` file extension. CSS can only works in HTML.
+CSS is a way to style HTML page to beautiful. File name with `.css` as suffix or extension name.
 
 ---
 
@@ -38,9 +38,9 @@ h1 {
 
 ## HTML + CSS
 
-There are many ways to use CSS into HTML.
+This is good way to use CSS into HTML.
 
-### 1`link` HTML tag
+### `link` HTML tag
 
 on HTML:
 
@@ -57,23 +57,14 @@ selector {
 }
 ```
 
-### 2 Inside HTML tag 
-###### (Not Recomended)
-
-```html
-<head>
-  <title style="color:blue;">Website</title>
-</head>
-```
-
 ---
 
 ## CSS Selectors
 
-CSS selectors define which HTML elements we want our styling to be applied to. There are many ways of targeting HTML elements using CSS selector.
+CSS selectors define which HTML elements we want our styling to be applied to.
 
 
-**1. Using Class Selector**
+**1. Class Selector**
 
 ```html
 <p class="date">
@@ -83,29 +74,21 @@ CSS selectors define which HTML elements we want our styling to be applied to. T
 
 ```css
 .date {
-  /* Elements with date class */
+  font-weight: bold;
+  font-size: 2em;
 }
 ```
 
-**2. Using Tag Selector**
+**2. Tag HTML Selector**
 
 ```css
 a {
-  /* Links */
-}
-p {
-  /* Paragraphs */
-}
-ul {
-  /* Unordered lists */
-}
-li {
-  /* List items */
+  text-decoration: none;
 }
 ```
 
 
-**3. Using ID Selector**
+**3. ID Selector**
 
 ```html
 <h1 id="tagline">This heading will be orange.</h1>
@@ -113,7 +96,7 @@ li {
 
 ```css
 #tagline {
-  /* Elements with tagline id */
+  color: orange;
 }
 ```
 
@@ -123,7 +106,7 @@ li {
 p,
 a,
 .date {
-  /* Paragraphs ,Links and date Class */
+  margin: .5em auto;
 }
 ```
 
@@ -137,7 +120,7 @@ a,
 
 ```css
 p a {
-  /* Links inside Paragraph*/
+  font-size: 1.5em;
 }
 ```
 
@@ -228,14 +211,6 @@ With height and width properties we can set the height and width of an element.
 #example {
   width: 50%;
   height: 200px;
-}
-```
-
-And if the content inside the element larger than element itself, we can use CSS overflow
-
-```css
-#example {
-  overflow: hidden; /* auto | scroll */
 }
 ```
 
