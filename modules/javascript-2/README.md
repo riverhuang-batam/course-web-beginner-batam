@@ -134,8 +134,6 @@ result = alphabet.push("e"); // result: 5, with alphabet being ["a", "b", "c", "
 result = alphabet.pop(); // result: e, with alphabet being ["a", "b", "c", "d"] again
 ```
 
-## JavaScript Date Methods
-
 ## use other libraries to ease our code
 
 * [numeral.js](http://numeraljs.com/) formatting & manipulating numbers.
