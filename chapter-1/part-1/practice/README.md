@@ -11,11 +11,9 @@ we will create simple web app like this [link](https://www.figma.com/file/ST25iC
   ![](./../../../modules/html-1/assets/vs-code-suggestion.png)
 * Update it like [html-1](./../../../modules/html-1/README.md) lesson
 
----
+### 1. header tag
 
-## 2. header tag
-
-* code inside `body` tag at top. with this code
+code inside `body` tag at top. with this code
 ```html
 <nav>
     <a href="/jual.html">Jual</a> | 
@@ -24,9 +22,10 @@ we will create simple web app like this [link](https://www.figma.com/file/ST25iC
 </nav>
 ```
 
-* To show on our web browser. use `http-server` like [npm-1](./../../../modules/npm-1/README.md) lesson
+To show on our web browser. use `http-server` like [npm-1](./../../../modules/npm-1/README.md) lesson
 
-## 3.   input tag
+### 2.   input tag
+
 ```html
 <!-- add below nav tag -->
 <div>
@@ -37,22 +36,89 @@ we will create simple web app like this [link](https://www.figma.com/file/ST25iC
 </div>
 ```
 
-## 4.   Table
+try open our browser where http-server is running and see what the result is.
 
-## 5.   Form
+### 3.   Table
 
-## 6.   Image
+```html
+<!-- add below input tag -->
+<table border="1">
+    <caption>Top title</caption>
+    <thead>
+        <tr>
+            <th rowspan="2">No</th>
+            <th colspan="3">This is table</th>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Budi</td>
+            <td>Programmer Enginner</td>
+            <td>2.9</td>
+        </tr>
+    </tbody>
+    <tfooter>
+        <tr>
+            <td colspan="3">Total</td>
+            <td>300</td>
+        </tr>
+    <tfooter>
+</table>
+```
 
-## 7.   Breadcrumb
+### 4.   Images
 
-## 8.   Buttons
+```html
+    <img src="https://via.placeholder.com/100x100?text=Image"/>
+    <img src="https://via.placeholder.com/100x100?text=width = 50px" width="50px"/>
+    <img src="https://via.placeholder.com/100x100?text=width = 50%" width="50%"/>
+    <div style="width:40%; display:inline-block">
+        <img src="https://via.placeholder.com/100x100?text=width = 50% * 40%" width="50%"/>
+    </div>
+```
+### 5.   Buttons
 
-## 9.   Card
+```html
+<button onclick="alert('im clicked)">click me</button>
+```
 
-## 10.  Horizontal Rule
+### 6.   Form
 
-## 11.  Break
+```html
+<form>
+    <input type="search" name="search"/>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <button type="button">Do nothing</button>
+</form>
+```
 
-## 12.  Fieldset
+### 7.  Horizontal Rule
 
-## 13.  Datalist
+```html
+<hr/>
+i'm in the middle horizonal ruler
+<hr/>
+```
+
+### 8.  Break
+
+```html
+<br>
+this below use 1 break
+<br>
+this text has 2 breaks below
+<br>
+<br>
+it's vertical space
+```
+
+## 3. Push to gitub
+
+this is how to push our code to github. In [here](./../../../modules/vscode-push-1/README.md)
