@@ -134,7 +134,30 @@ result = alphabet.push("e"); // result: 5, with alphabet being ["a", "b", "c", "
 result = alphabet.pop(); // result: e, with alphabet being ["a", "b", "c", "d"] again
 ```
 
+---
+
 ## use other libraries to ease our code
 
-* [numeral.js](http://numeraljs.com/) formatting & manipulating numbers.
-* [moment.js](https://momentjs.com/) parse, validate, manipulate & display date and time.
+### [numeral.js](http://numeraljs.com/) 
+
+formatting & manipulating numbers.
+
+#### Installation & Usage
+add inside tag `head` in our html file.
+`<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>`
+
+on js file
+```js
+  // example
+
+  let nilai = numeral('1,000,000,000,200.00');
+  let nilaiInteger = nilai.value();
+  console.log(nilaiInteger);
+  console.log('nilainya adalah ',nilaiInteger.format('Rp 0.00'));
+
+  let nilaiKe2 = numeral ('Rp 200,500,000');
+  console.log('nilai integer ke dua adalah ', nilaiKe2.value());
+```
+
+
+### [moment.js](https://momentjs.com/) parse, validate, manipulate & display date and time.
