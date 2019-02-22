@@ -54,11 +54,20 @@ With 4 coordinates properties:
 
 ---
 
-## CSS Web Safe Fonts
+## CSS Web Fonts
 
-The font-family property should hold several font names as a "fallback" system, to ensure maximum compatibility between browsers/ OS. **If the browser does not support the first font, it tries the next font**.
+We can add good fonts to our website. we can try [google fonts](https://fonts.google.com/).
+famous google fonts are:
 
-Start with the font you want, and end with a generic family, to let the **browser pick a similar font in the generic family**, **if no other fonts are available**
+|font-family | Example |
+|---|---|
+| [Roboto](https://fonts.google.com/?query=roboto&category=Sans+Serif) | ![](./assets/Roboto.png) |
+| [Oswald](https://fonts.google.com/?query=oswald&category=Sans+Serif) | ![](./assets/Oswald.png) |
+| [Source Sans Pro](https://fonts.google.com/?query=sans+pro&category=Sans+Serif) | ![](./assets/Source_Sans_Pro.png) |
+| [Lora](https://fonts.google.com/?query=lora&category=Serif) | ![](./assets/Lora.png) |
+| [Concert One](https://fonts.google.com/?query=concert&category=Display) | ![](./assets/Concert_One.png) |
+
+### how to use
 
 ```CSS
 p  {
@@ -66,12 +75,15 @@ p  {
 }
 ```
 
-Example:
+### Safe fonts
 
-![web-safe-fonts](./assets/web-safe-fonts.png)
-
-#### references
-* [common fonts used](https://websitesetup.org/web-safe-fonts-html-css)
-* [google fonts](https://fonts.google.com/)
-
+  * font-family: Arial, Helvetica, sans-serif
+  * font-family: "Bookman Old Style", serif
+  * font-family: "Comic Sans MS", cursive, sans-serif
+  * font-family: Impact, sans-serif
+  * font-family: "Lucida Console", monaco, monospace
+  * font-family: "Palatino Linotype", "Book Antiqua", serif
+  * font-family: "Times New Roman", serif
+  * font-family: Verdana, Geneva, sans-serif
+  
 ---
