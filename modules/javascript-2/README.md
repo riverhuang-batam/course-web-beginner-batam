@@ -19,13 +19,15 @@ Examples:
 // String
 let string1 = "this is a string";
 let string2 = "another string";
-let string3 = `${string1} and ${string2}`; // result: this is a string and another string
+let string3 = `${string1} and ${string2}`;
+console.log('string3 nilainya adalah', string3);
 
 // Number
 let decimal1 = 2;
 let decimal2 = 2.24;
 let decimal3 = 2 + 2; // result: 4
 let decimal4 = 1 + 2 / 4; // result: 1.5
+console.log('nilai decimal4 is : ', decimal4 )
 
 // Boolean
 let isTrue = true;
@@ -143,7 +145,7 @@ result = alphabet.pop(); // result: e, with alphabet being ["a", "b", "c", "d"] 
 formatting & manipulating numbers.
 
 #### Installation & Usage
-add inside tag `head` in our html file.
+add inside `body` tag on below in our html file.
 `<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>`
 
 on js file
@@ -160,4 +162,30 @@ on js file
 ```
 
 
-### [moment.js](https://momentjs.com/) parse, validate, manipulate & display date and time.
+#### [moment.js](https://momentjs.com/) parse, validate, manipulate & display date and time.
+
+add inside `body` tag on below in our html file.
+`<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>`
+
+on js file
+
+##### [Displaying](https://momentjs.com/docs/#/displaying/format/)
+
+```js
+
+  //example
+  let today = moment();
+  console.log('today is ', today.format('dddd, MMMM Do YYYY'))
+```
+
+#### [Manipulating](https://momentjs.com/docs/#/manipulating/add/)
+
+```js
+  console.log('next week is ',moment().add(1, 'weeks').format('DD MMMM YYYY'))
+```
+
+#### [Displaying Time from now](https://momentjs.com/docs/#/displaying/fromnow/)
+
+```js
+console.log(moment([2013, 1, 29]).fromNow());
+```
