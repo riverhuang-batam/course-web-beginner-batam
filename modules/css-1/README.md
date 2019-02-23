@@ -167,18 +167,6 @@ All HTML elements can be considered as boxes. In CSS, the term "box model" is us
 - Border - A border that goes around the padding and content
 - Margin - Clears an area outside the border. The margin is transparent
 
-### CSS Background
-
-The background of an HTML element is what appears behind the text. We can set an image or a color to be a background of the HTML element.
-
-```css
-#example {
-  background-color: blue;
-  background-image: url(./images/impactbyte.png);
-  background-repeat: no-repeat;
-}
-```
-
 ### CSS Display
 
 CSS display properties can change display type of the HTML element. For example `<p>` element display default type is block and `<span>` display default type is inline. With display properties we can change `<span>` default type to be block.
