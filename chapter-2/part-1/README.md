@@ -9,4 +9,3 @@
 * [Javascript 8](../../modules/javascript-8/README.md)
 * [React 1](../../modules/react-1/README.md)
 * [Reactstrap 1](../../modules/reactstrap-1/README.md)
-* [Practice](./practice/README.md)
