@@ -4,19 +4,11 @@
 
 1. open our `command line interface` or `CLI`
 2. type `sudo npm install create-react-app -g`
-      * `sudo` in linux is do something as admin
-      * `--g` it's option that will be add globaly'
+      * `sudo` in linux is do something, as admin.
+      * `--g` it's option that will be add globaly
 3. go to inside folder `learn-reactjs` where we already create via git before. [previous lession github-1](./../github-1/README.md)
-4. type `create-react-app ./`. the `./` means will setup reactjs in current folder.
-5. after done, there's list of commands that we can do. we can do on VS code. to do that type `code .` (including dot). will show VS code with current folder that we used on CLI.
-
-example on CLI
-
-```sh
-create-react-app example
-cd example
-npm start
-```
+4. type `create-react-app basic-react`. the `basic-react` means will setup reactjs by creating folder named `basic-react`.
+5. open VS Code. do `add folder to workspace`. The folder we add should `basic-react` folder name.
 
 --- 
 
@@ -28,13 +20,12 @@ npm start
 
 2. Press `CTRL + ~`. Will show terminal menu on below.
 3. Type `sudo npm run start` to show our first react app running.
+4. Read the message, at least they giving our next step is open our browser with address and port that already designed.
 
 ## How it Works
 
 1. `npm run start` what it's mean?. 
-   `npm run` command lets we define custom scripts in our `package.json` and `start` is for we run command on package.json on field `scripts` and `on field `start` whichs value is `react-scripts start`
-   
-   the `react-scripts` have `webpack module bundler` and `Bable Js Transpiler`.
+   `npm run` command lets we define custom scripts in our `package.json` and `start` is for we run command on `package.json` file on field `scripts` and `on field `start` whichs value is `react-scripts start`.
 
 
 <!-- ### References
