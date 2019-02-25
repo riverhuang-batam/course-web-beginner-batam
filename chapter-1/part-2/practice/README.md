@@ -55,11 +55,3 @@ see how it work.
 add css for class `btn-info` `warning` and `danger`. add with your color
 
 ---
-
-## 3. JS
-
-create file `learn-js.js` add to `index.html`
-
-### 1. [Numeraljs](http://numeraljs.com/)
-
-
