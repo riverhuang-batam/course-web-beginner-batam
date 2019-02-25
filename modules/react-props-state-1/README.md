@@ -22,11 +22,11 @@
 ## Example State & Props
 
 ```js
-    // Card.js
+    // ./molecules/Card.js
     // using State
  
     import React, { Component } from 'react';
-    import Message from 'Message';
+    import Message from './../atoms/Message';
     
     class Card extends Component {
         state = {
@@ -58,7 +58,7 @@
 ```
 
 ```js
-    // Message.js
+    // atoms/Message.js
     // using props
 
     import React from 'react';
