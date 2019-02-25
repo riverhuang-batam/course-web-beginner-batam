@@ -1,137 +1,127 @@
 # Javascript 5
 
-## Built-In Functions
-
-* syntax
-
-```javascript
-//variable can be String, Array, etc.. Object can be self declared Object Or Built-In Object like Math
-[variable/object].[builtin Functions/properties](param1, param2, etc ...)
-```
-
 ## String Built-In Functions
-
-Javascript's string has various built-in function like`charAt`,`length`,`toUpperCase`,`toLowerCase`,`split`,`replace`,`substr`
 
 ```javascript
 //charAt Example
-var string = "Impact Byte";
-var result = string.charAt(0); //result:I["Impact", "Byte"]
-result = string.charAt(1); //result:m
-result = string.charAt(6); //result:" "(space)
+let stringIBBatam = "Impact Byte Batam";
+let resultChartAt0 = stringIBBatam.charAt(0);
+console.log('resultChartAt0 : ', resultChartAt0)
+resultChartAt0 = stringIBBatam.charAt(1);
+console.log('resultChartAt0 : ', resultChartAt0)
+resultChartAt0 = stringIBBatam.charAt(6);
 
 //length Example
-var string = "Impact Byte";
-var result = string.length; //result:I
+let resultLength = stringIBBatam.length;
+console.log('resultLength is ', resultLength)
 
 //toUpperCase example
-var string = "Impact Byte";
-var result = string.toUpperCase(); //result:IMPACT BYTE`random`,
+let resultToUpperCase = stringIBBatam.toUpperCase();
+console.log('resultToUpperCase is :', resultToUpperCase)
 
 //toLowerCase example
-var string = "Impact Byte";
-var result = string.toLowerCase(); //result:impactbyte
+let resultToLowerCase = stringIBBatam.toLowerCase();
+console.log('resultToLowerCase is :', resultToLowerCase)
 
 //split example
-var split = "Impact Byte Charizard";
-var result = string.split(" "); //result:["Impact", "Byte", "Charizard"]
-var result = string.split(" ", 2); //result:["Impact", "Byte"]
+let resultSplit = stringIBBatam.split(" ");
+console.log('resultSplit is ', resultSplit);
+resultSplit = stringIBBatam.split(" ", 2);
+console.log('second resultSplit is ', resultSplit);
 
 //replace example
-var split = "Impact Byte Charizard";
-var result = str.replace("Charizard", "Bahamut"); //result:Impact Byte Bahamut
+let resultReplace = stringIBBatam.replace("Batam", "Kepulauan Riau");
+console.log('resultReplace is ', resultReplace)
 
 //substr example
-var split = "Impact Byte Charizard";
-var result = str.substr(0, 5); //result:Impact
-var result = str.substr(0, 3); //result:Impa
+let resultSubstr = stringIBBatam.substr(0, 6);
+console.log('resultSubstr is ', resultSubstr);
+resultSubstr = stringIBBatam.substr(0, 3);
+console.log('second resultSubstr is ', resultSubstr);
 ```
 
 ## Array Methods
 
-javascript's array has various built-in function like `length`, `random`, `indexOf`, `push`, `pop`, `join`, `slice`, `splice`, `sort`, `reverse`
-
 ```javascript
 //length Example
-var array = ["Impact", "Byte", "Charizard"];
-var result = array.length; //result:3
+let iBBatamArray = ["Impact", "Byte", "Batam"];
+let resultArrayLength = iBBatamArray.length;
+console.log(`resultArrayLength is ${resultArrayLength}`)
 
 //indexOf Example
-var array = ["Impact", "Byte", "Charizard"];
-var result = array.indexOf("Byte"); //result:1
-var result = array.indexOf("Charizard"); //result:2
+let resultArrayIndexOf = iBBatamArray.indexOf("Byte");
+console.log(`resultArrayIndexOf is ${resultArrayIndexOf}`)
+    resultArrayIndexOf = iBBatamArray.indexOf("Batam");
+console.log(`second resultArrayIndexOf is ${resultArrayIndexOf}`)
 
 //push Example
-var array = ["Impact", "Byte", "Charizard"];
-var result = array.push("Bahamut"); //result:["Impact", "Byte", "Charizard","Bahamut"]
+iBBatamArray.push("Web");
+console.log ('result push into array is', iBBatamArray);
+
 
 //pop Example
-var array = ["Impact", "Byte", "Charizard"];
-var result = array.pop(); //result:["Impact", "Byte"]
+iBBatamArray.pop();
+console.log ('result pop from array is', iBBatamArray);
 
 //join Example
-var array = ["Impact", "Byte", "Charizard"];
-var result = array.join("--"); //result:Impact--Byte--Charizard
+let resultArrayJoin = iBBatamArray.join("--");
+console.log ('result join array is', resultArrayJoin);
 
 //slice Example
-var array = ["Impact", "Byte", "Charizard"];
-var result = array.slice(1); //result:["Byte", "Charizard"]
-var result = array.slice(1, 2); //result:["Impact", "Byte"]
+let resultArraySlice = iBBatamArray.slice(1);
+console.log(`resultArraySlice is `, resultArraySlice)
+resultArraySlice = iBBatamArray.slice(1, 2);
+console.log(`second resultArraySlice is `, resultArraySlice)
 
 //sort Example
-var array = ["Impact", "Byte", "Charizard"];
-var result = array.sort(); //result:["Byte", "Charizard", "Impact"]
+iBBatamArray.sort();
+console.log(`iBBatamArray.sort() is `, iBBatamArray)
 
 //reverse Example
-var array = ["Impact", "Byte", "Charizard"];
-var result = array.reverse(); //result:["Charizard", "Byte", "Impact"]
+iBBatamArray.reverse();
+console.log(`iBBatamArray.reverse() is `, iBBatamArray)
 ```
 
 ## Math Methods
 
-javascript's Math has various built-in function like `random`, `ceil`, `floor`
-
 ```javascript
 //random Example
-var result = Math.random(); //result:0.5451840492285749(random number)
+let resultMathRandom = Math.random();
+console.log(`result of resultMathRandom is ${resultMathRandom}`);
 
 //ceil Example
-var result = Math.ceil(2.5); //result:3
+let resultMathCeil = Math.ceil(2.5);
+console.log(`result of resultMathCeil is ${resultMathCeil}`);
+resultMathCeil = Math.ceil(2.1);
+console.log(`second result of resultMathCeil is ${resultMathCeil}`);
 
 //floor Example
-var result = Math.floor(1.8); //result:1
+let resultMathFloor = Math.floor(1.9);
+console.log(`result of resultMathFloor is ${resultMathFloor}`);
+
+//rounding value example
+let resultMathFloorRound = Math.round(2.4);
+console.log(`result of resultMathFloorRound is ${resultMathFloorRound}`)
+resultMathFloorRound = Math.round(2.5);
+console.log(`second result of resultMathFloorRound is ${resultMathFloorRound}`)
 ```
 
 ## Object Methods
 
-javascript's Object has various built-in function like `assign` and `keys`
-
 ```javascript
 //assign example
-var object1 = { fname: "John" };
-var object2 = { lname: "Doe" };
-var object3 = { age: 30 };
+let object1 = { fname: "John" };
+let object2 = { lname: "Doe" };
+let object3 = { age: 30 };
 
-var object4 = Object.assign(object1, object1, object1);
-/*
-object4:{
-  fname: "John",
-  lname: "Doe",
-  age: 30
-}
-object1:{
-  fname: "John",
-  lname: "Doe",
-  age: 30
-}
-*/
+let object4 = {...object1, ...object2, ...object3}
+console.log(`object4 value is`, object4)
 
-var object1 = {
-  fname: "John",
-  lname: "Doe",
-  age: 30
-};
-var result = Object.keys(object1); //result:["fname","lname","age"]
+let object5 = { object1, object2, object3}
+console.log(`object5 value is`, object5)
+
+let resultObjectKeys = Object.keys(object4);
+console.log(`resultObjectKeys is`, resultObjectKeys)
 ```
 
 ## Timing Methods
@@ -139,17 +129,18 @@ var result = Object.keys(object1); //result:["fname","lname","age"]
 ```javascript
 //setInterval example
 function firstFunction() {
-  setInterval(function() {
-    alert("Impact Byte");
+  let count = 0;
+  setInterval(() => {
+    count++;
+    alert(`this is setInterval & already show in  ${count} times`);
   }, 3000);
 }
 firstFunction();
 
 function secondFunction() {
-  setInterval(function() {
-    alert("Hello");
-  }, 3000);
+  setTimeout( () => {
+    alert("this is settimeout");
+  }, 3000)
 }
 secondFunction();
-//setTimeout Example
 ```

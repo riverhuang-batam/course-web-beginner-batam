@@ -8,36 +8,6 @@ Function is a feature of JavaScript that allow us to **do something** whenever t
 
 ## How to use
 
-### regular `function` keyword
-
-Syntax:
-
-`function name() {}`
-
-```js
-function myFunction(totalPrice, name) {
-  totalTax = totalPrice * 0.1;
-
-  detailTax = `name: ${name}, tax:${totalTax}`;
-  return detailTax;
-}
-```
-
-### variable function
-
-Syntax:
-
-`const x = function() {}`
-
-```js
-const myFunction = function(totalPrice, name) {
-  totalTax = total_price * 0.1;
-
-  detailTax = `name: ${name}, tax:${totalTax}`;
-  return detailTax;
-};
-```
-
 ### arrow function
 
 Syntax:
@@ -46,62 +16,32 @@ Syntax:
 
 ```js
 //example 1
-var names = ["Budi", "Joni", "Tono", "Jaka"];
+let names = ["Budi", "Joni", "Tono", "Jaka"];
+let modifiedName = names.map(name => "Mr." + name);
+console.log('modifiedName value are', modifiedName)
 
-var modifiedName = names.map(name => "Mr." + name);
 
-// with function inside var
-var funct = name => "Mr." + name;
-
-var modifiedName = names.map(funct);
+const funct = name => "Mrs." + name;
+modifiedName = names.map(funct);
+console.log('second modifiedName value are', modifiedName)
 ```
 
 ### Function arguments and default parameters
 
-Syntax:
-
-`function (input = "default") {}`
-
 ```js
-function myFunction(totalPrice, name) {
-  totalTax = totalPrice * 0.1;
-
-  detailTax = `name: ${name}, tax:${totalTax}`;
-  return detailTax; // The function returns the product of p1 and p2
+const myFunction = (totalPrice, name) => {
+  const totalTax = totalPrice * 0.1;
+  const detailTax = `name: ${name}, tax:${totalTax}`;
+  
+  return detailTax;
 }
+
+myFunction(10000, 'Shirt');
 ```
 
 ---
 
-## `var` vs `let` vs `const` in function
-
-### **var**
-
-Variables can be re-declared and updated.
-
-```js
-var greeter = "hey hi";
-var greeter = "say Hello instead";
-```
-
-It is available and can be accessed only within that function.
-
-```js
-function newFunction() {
-  var hello = "hello";
-  console.log(hello)
-}
-newFunction();
-console.log(hello); // error: hello is not defined
-```
-
-Declare variable on the top, before execution.
-
-```js
-console.log(greeter); // print undefined
-var greeter = "say hello";
-console.log(greeter);
-```
+## `let` vs `const` in function
 
 ### **let**
 
@@ -115,11 +55,11 @@ greeting = "say Hello instead";
 Block scoped.
 
 ```js
-if (times > 3) {
+{
   let hello = "say Hello instead";
   console.log(hello); //"say Hello instead"
 }
-console.log(hello); // hello is not defined
+console.log(hello); // error : hello is not defined
 ```
 
 ### **const**
@@ -128,7 +68,7 @@ console.log(hello); // hello is not defined
 
 ```js
 const greeting = "say Hi";
+greeting = "hi too";  // error: Assignment to constant variable
 const greeting = "say Hello instead"; //error : Identifier 'greeting' has already been declared
 ```
-
 ---
