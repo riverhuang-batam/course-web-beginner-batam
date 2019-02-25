@@ -25,43 +25,45 @@ const words = [
 ];
 
 let longWords = words.filter(word => word.length > 6);
-
+console.log('long words are : ', longWords);
 // longWords: ["exuberant", "destruction", "present"]
 ```
 
 ### `map`
 
 ```js
-var array1 = [1, 4, 9, 16];
+let array1 = [1, 4, 9, 16];
 
 // pass a function to map
-const map1 = array1.map(x => x * 2);
+const newArray = array1.map(x => x * 2);
+// it's same with
+// array1.map( (x) => x * 2 );
+// array1.map( (x) => { return x * 2 } );
+// array1.map( function (x) { return x * 2 } );
 
+console.log('new array are : ', newArray)
 // map1: Array [2, 8, 18, 32]
 ```
 
 ### `find`
 
 ```js
-var array1 = [5, 12, 8, 130, 44];
-
-var found = array1.find(function(element) {
-  return element > 10;
-});
-
+let array2 = [5, 12, 8, 130, 44];
+let found = array2.find ( element => element > 10 );
+console.log('find array where bigger than 10 is : ', found )
 // found: 12
 ```
 
 ### `forEach`
 
 ```js
-var array1 = ["a", "b", "c"];
-var text = "";
+let array3 = ["a", "b", "c"];
+let text = "";
 
-array1.forEach(function(element) {
+array3.forEach( element => {
   text += element + ",";
 });
-
+console.log('text is : ', text);
 // text: a,b,c,
 ```
 
