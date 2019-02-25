@@ -1,10 +1,10 @@
-# Reactstrap 1
+# [Reactstrap](https://reactstrap.github.io/) 1
 
 ---
 
 ## Introduction
 
-a Way to use Twitter Bootstrap 4 into React easyly, where already been as React component.
+a Way to use [Twitter Bootstrap 4](https://getbootstrap.com/) into React with easy, where already been as React component.
 
 ---
 
@@ -41,8 +41,3 @@ a Way to use Twitter Bootstrap 4 into React easyly, where already been as React 
     ```
     there are 7 colors the other are `success`, `info`, `warning`, `danger`, `link`. we dont set color attribute, thats means the color attribute default value is `secondary`.
     try code for button with 7 colours.
-
----
-
-## References
-[https://reactstrap.github.io]()
