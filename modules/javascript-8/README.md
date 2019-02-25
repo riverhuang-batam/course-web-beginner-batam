@@ -1,11 +1,10 @@
-# JavaScript 10 (ES 6 / ES 2015)
+# JavaScript 8 (ES 6 / ES 2015)
 
 ---
 
 ## Classes
 
 ```js
-
 class Circle extends Shape {
   constructor (radius) {
     this.radius = radius;
@@ -15,6 +14,8 @@ class Circle extends Shape {
   }
 }
 
+let circle = new Cicle(10);
+circle.getArea();
 ```
 
 ---
@@ -22,11 +23,9 @@ class Circle extends Shape {
 ## Template Strings (backtick)
 
 ```js
-
 let name = 'Budi';
 let sayHi = `hi my name is ${name}`;
 console.log(sayHi);
-
 ```
 
 ---
@@ -51,8 +50,6 @@ const functionName3 = argument1 => {
 
 // can become like below if only one statement, this will return value
 const functionName4 = argument1 => `hi i'm argument1 with value ${argument1}`;
-// it can be intrepeted like this
-const functionName5 = argument1 => return `hi i'm argument1 with value ${argument1}`;
 ```
 
 ---
@@ -76,7 +73,7 @@ const functionName5 = argument1 => return `hi i'm argument1 with value ${argumen
 ### can be used on parameter matching
 
 ```js
-  const simpleFunction = ({name, gender}) => `hi my name is ${name}`
+  const simpleFunction = ({name, gender}) => `hi my name is ${name} with gender ${gender}`
   const greeting = simpleFunction(object)
   console.log(greeting)
 ```
@@ -109,10 +106,10 @@ const person1 = {
 
 const person2 = {
   ...person1,
-  name: 'Tider Hunter'
+  name: 'Tide Hunter'
 };
-
-console.log(person2);   // { name: "Tide Hunter", class: "Support", level: 21}
+console.log(`person1 is`, person1)
+console.log(`person2 is`, person2)
 ```
 
 ---
@@ -120,6 +117,8 @@ console.log(person2);   // { name: "Tide Hunter", class: "Support", level: 21}
 ## Objects
 
 ```js
+const helo = "koni chiwa";
+const by = "ja ne";
 module.exports = { hello, bye }
 // same as : module.exports = { hello: hello, bye: bye }
 ```
@@ -130,7 +129,12 @@ const App = {
     console.log('running')
   }
 }
-// same as : App = { start : function () {...} }
+
+const App2 = {
+  start: () => {
+    console.log('running')
+  }
+}
 ```
 
 ---
@@ -143,16 +147,16 @@ const App = {
 import 'helpers'
 
 import Express from 'express'
-// same as: const Express = require('...').default || require('...')
+// same as: const Express = require('express').default || require('express')
 
 import { indent } from 'helpers'
-// same as: const indent = require('...').indent
+// same as: const indent = require('helpers').indent
 
 import * as Helpers from 'helpers'
-// same as: const helpers = require('...')
+// same as: const helpers = require('helpers')
 
 import { indentSpaces as indent } from 'helpers'
-// same as: const indent = require('...').indentSpace
+// same as: const indent = require('helpers').indentSpace
 ```
 
 ### Exports
@@ -161,9 +165,9 @@ import { indentSpaces as indent } from 'helpers'
 export default function () { ... }
 // same as: module.exports.default = ...
 
-eport function myMethod() { ... }
+export function myMethod() { ... }
 // same as: module.export.mymethod = ...
 
-expot const pi = 3.14159;
+export const pi = 3.14159;
 // same as: module.exports.pi = ...
 ```
