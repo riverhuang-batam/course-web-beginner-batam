@@ -15,17 +15,20 @@ Organize code by design system by hierarchy, in this case by folder structure & 
 
 ### Atoms
 
-Is a native html tag, a React Component that renders and html tag or any third party component
+Is a native html tag, a React Component that renders and html tag or any third party component.
+to begin create folder named `components` inside `src` folder. in `components` folder, create 5 folder named `atoms`, `molecules`, `organisms`, `templates`, `pages`
 
 ```js
 // atoms/Input.js
-const input = props => <input {...props} />
+const Input = props => <input placeholder="ENTER KEYWORD" />
 ```
+![](./assets/input.png)
 
 ```js
 // atoms/Label.js
-const Label = props => <label {...props} />
+const Label = props => <label>SEARCH THE SITE</label>
 ```
+![](./assets/label.png)
 
 ### Molecules
 
@@ -33,27 +36,37 @@ Is a group of atoms
 
 ```js
 // molecules/Field.js
-const Field = ({ label, ...inputProps }) => {
-    <Label>
-        {label}
-        <Input {...inputProps} />
-    </Label>
+import Label from './../atoms/Label';
+import Input from './../atoms/Input';
+
+const Field = () => {
+    <div>
+        <Label/>
+        <Input/>
+    </div>
 }
 ```
+![](./assets/molecule.png)
 
 ### Organisms
 
 Is a group of atoms, molecules and/or other organisms
 
 ```js
-// organisms/Form.js
-const Form = (props) => (
-    <Form {...props}>
-        <Field label="Name" type="text"/>
-        <Field label="Email" type="email" />
-    </form>
+// organisms/Header.js
+import Field from './../molecules/Field';
+import Nav from './../molecules/Nav';
+import Logo from './../atom/Logo';
+
+const Header = (props) => (
+    <div>
+        <Logo/>
+        <Nav/>
+        <Field/>
+    </div>
 )
 ```
+![](./assets/organism.png)
 
 ### Templates
 
@@ -69,6 +82,8 @@ const PageTemplate = ({header, children }) => (
 )
 ```
 
+![](./assets/template.png)
+
 ### Pages
 
 Is where you will put mostly (but not exclusively) organisms:
@@ -81,31 +96,4 @@ Is where you will put mostly (but not exclusively) organisms:
         </PageTemplate>
     }
 ```
-
----
-
-## Picture illustration
-
-### Atoms
-
-![](./assets/label.png)
-
-![](./assets/input.png)
-
-![](./assets/button.png)
-
-### Molecule
-
-![](./assets/molecule.png)
-
-### Organism
-
-![](./assets/organism.png)
-
-### Template
-
-![](./assets/template.png)
-
-### Page
-
 ![](./assets/page.png)
