@@ -66,6 +66,15 @@
     export default (props) => {
         const message = props && ( props.children || props.date || '')
         return (
-            <div>{${message}}</div>
+            <div>{` this date is : ${message}`}</div>
         )
     }
+```
+
+## To show what happen
+    * Open `App.js` in `src` folder.
+    * add on before `class ...` code. add this code `import Card from './components/molecules/Card'`
+    * in side return. add `<Card/>`
+    * will show on bottom of our browser
+ 
+  ![](./assets/result.png)
