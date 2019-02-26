@@ -6,14 +6,16 @@
 
 Interactive UI component dev & test
 
+## Pre Installation
+
+already install via `create-react-app`
+
 ## Installation
 
-1. Do on our CLI
-```sh
-npm install @storybook/react --save-dev
-```
+1. go to project path via CLI
+2. run this `npm install @storybook/react --save-dev` to install storybook library for react
 
-2. add NPM script on our `package.json`
+3. add NPM script on our `package.json`
 ```sh
 {
     "scripts": {
@@ -22,10 +24,12 @@ npm install @storybook/react --save-dev
 }
 ```
 
-3. Create file at `.storybook/config.js` with the following content
+4. Create folder `.storybook` & `stories`. In `.storybook` create file named `config.js`. In `stories` folder create file named `index.js`
+   
+5. in `config.js` file, write code like this.
+
 ```js
 import { configure } from '@storybook/react';
-
 function loadStories() {
     require('../stories/index.js');
     // we can require as many stories as we need.
@@ -34,7 +38,8 @@ function loadStories() {
 configure(loadStories, module);
 ```
 
-4. On `../stories/index.js` file. write code like this.
+6. On `index.js` file. write code like this.
+
 ```js
 import React from 'react';
 import { storiesOf } from '@storybook/react';
@@ -45,10 +50,10 @@ storiesOf('Button', module)
         <Buton>Hello Button</Button>
     ))
     .add('with some emoji', () => (
-        <Button>span role="img" aria-label="so cool">😀 😎 👍 💯</span></Button>
+        <Button><span role="img" aria-label="so cool">😀 😎 👍 💯</span></Button>
     ))
 ```
 
-5. Run on your CLI with this command. `npm run storybook`.
+7. Run on your CLI with this command. `npm run storybook`. After that it will show us what address & port should we look via browser.
    
    ![](./assets/storybook.png)
