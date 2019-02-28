@@ -4,7 +4,8 @@
 
 ## Before start
 
-try read again on [reactstrap-1](./../reactstrap-1/README.md) about installation
+* try read again on [reactstrap-1](./../reactstrap-1/README.md) about installation.
+* below these code create inside folder `Molecules` with named respectively. also create `stories` too
 
 ---
 
