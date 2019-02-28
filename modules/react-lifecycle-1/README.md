@@ -59,4 +59,5 @@ metods are called automaticly triggered by `mounting`, `updating` and `unmountin
 #### Unmounting
 
 5. `componentWillUnmount`
-    this method will be run before DOM is to be removed. usually being used to prevent memory leak or slow performance
+    this method will be run before DOM is to be removed. To stop other process who no needed to prevent
+     prevent memory leak or slowing app performance.
