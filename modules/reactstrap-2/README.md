@@ -88,17 +88,34 @@ export default class Navigation extends Component {
 
 ```js
 import React, { Component } from 'react';
-import Nav from './../Nav';
+import { Collapse, Navbar, NavbarBrand, NavbarToggler } from 'reactstrap';
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-export default class Navbar extends Component {
+import Nav from './../Nav';
+
+export default class MoleculesNavbar extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            isOpen: false
+        }
+    }
+
+    toggle = () => {
+        console.log(this);
+        this.setState({
+            isOpen: !this.state.isOpen
+        })
+    }
+
     render() {
         return (
             <Navbar color="light" light expand="md">
-                <NabarBrand href="/">Shopee</NabarBrand>
-                <NavbarToggler onClick={this.toggle} />
+                <NavbarBrand href="/">Shopee</NavbarBrand>
+                <NavbarToggler onClick={this.toggle } />
                 <Collapse isOpen={this.state.isOpen} navbar>
-                    <Nav></Nav>
+                    <Nav className="ml-auto" navbar/>
                 </Collapse>
             </Navbar>
         );
@@ -111,6 +128,24 @@ export default class Navbar extends Component {
 
 ## [Card](https://reactstrap.github.io/components/card/)
 
-ADD CODE EXAMPLE 
+```js
+import React from 'react';
+import { Button, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle } from 'reactstrap';
 
----
+const SimpleCard = props => {
+
+    return (
+        <Card body inverse color="success">
+            <CardImg top/>
+            <CardBody>
+                <CardTitle>this is CardTitle</CardTitle>
+                <CardSubtitle>this is CardSubTitle</CardSubtitle>
+                <CardText>this is CardText</CardText>
+                <Button>this is Button</Button>
+           </CardBody>
+        </Card>
+    )
+}
+
+export default SimpleCard;
+```
