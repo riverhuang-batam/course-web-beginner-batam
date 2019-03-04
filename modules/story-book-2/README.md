@@ -28,7 +28,7 @@ create file named `stories.js` with content like below
     import Message from './index';
 
     storiesOf('Atoms / Message', module)
-        .add('with no content', () => {
+        .add('with Helo content', () => {
             return (
                 <Message>Helo</Message>
             )
@@ -78,3 +78,5 @@ sudo npm run storybook
 ```
 
 after that it will give us information what address & port to open on web browser & see what's storybook like
+
+![](./assets/storybook.png)
