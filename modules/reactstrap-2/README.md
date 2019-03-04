@@ -12,10 +12,11 @@
 ## [Layout](https://reactstrap.github.io/components/layout/)
 
 ```js
-import React from 'react';
+import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default class Layout extends React.Component {
+export default class Layout extends Component {
   render() {
     return (
       <Container>
@@ -56,10 +57,11 @@ after finish, try resize your screen and watch the box is moving
 ## [Nav](https://reactstrap.github.io/components/navs/)
 
 ```js
-import React from 'react';
+import React, { Component } from 'react';
 import { Nav, NavItem, NavLink } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default class Navigation extends React.Component {
+export default class Navigation extends Component {
   render() {
     return (
       <div>
@@ -85,6 +87,23 @@ export default class Navigation extends React.Component {
 ## [Navbar](https://reactstrap.github.io/components/navbar/)
 
 ```js
+import React, { Component } from 'react';
+import Nav from './../Nav';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+export default class Navbar extends Component {
+    render() {
+        return (
+            <Navbar color="light" light expand="md">
+                <NabarBrand href="/">Shopee</NabarBrand>
+                <NavbarToggler onClick={this.toggle} />
+                <Collapse isOpen={this.state.isOpen} navbar>
+                    <Nav></Nav>
+                </Collapse>
+            </Navbar>
+        );
+    }
+}
 
 ```
 
