@@ -17,7 +17,7 @@ a Way to use [Twitter Bootstrap 4](https://getbootstrap.com/) into React with ea
 
 ## Installation
 
-1. `npm install --save reactstrap`
+1. `npm install --save reactstrap bootstrap`
 2. on `src/index.js`, add code like this. Put on top of index.js file.
     ```js
     import 'bootstrap/dist/css/bootstrap.min.css';
@@ -26,7 +26,7 @@ a Way to use [Twitter Bootstrap 4](https://getbootstrap.com/) into React with ea
 3. on `src/App.js` type
     ```js
     import React from 'react';
-    import { Button } from 'reactstrap'
+    import { Button } from 'reactstrap';
 
     export default class Example extends React.Component {
         render() {
