@@ -7,5 +7,5 @@
 * [React Props State 1](../../modules/react-props-state-1/README.md)
 * [React Lifecycle 1](../../modules/react-lifecycle-1/README.md)
 * [Story Book 2](../../modules/story-book-2/README.md)
-* [Reactstrap 2](../../modules/reactstrap-2/README.md)    need updated pls
-* [Practice]() need to add on modules
+* [Reactstrap 2](../../modules/reactstrap-2/README.md)
+* [Practice 4](./practice/README.md)
