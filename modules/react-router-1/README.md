@@ -17,34 +17,40 @@ Declarative routing, easy to maintain what module to be load based URL.
 ## How to use
 
 ```js
-import React from 'react';
-import { HashRouter, NavLink, Route, Switch } from 'react-router-dom';
+// usually in App.js or index.js
 
-//COMPONENTS
-import PostsItem from './organism/PostsItem';
-import Profile from './organism/Profile';
-// pls fill in
+import React, { Component } from 'react';
+import { HashRouter, NavLink, Route, Switch} from 'react-router-dom';
 
-export default () => {
+//include components
+import SimpleCard from './../src/components/molecules/SimpleCard';
+import Form from './../src/components/organisms/Form';
+import Modal from './../src/components/organisms/Modal';
+import Card from './../src/components/molecules/Card';
+
+class App extends Component {
+  render() {
     return (
-        <HashRouter>
-            <div>
-                <header>
-                    <NavLink to="/"> Home</NavLink>{` `}
-                    <NavLInk to="/posts">Posts</Navlink>{` `}
-                    <NavLink to="/profile">Profile</NavLink>{` `}
-                </header>
-                <Switch>
-                    <Route path="/posts/:id" component={PostsItem}/>
-                    <Route path="/profile" component={Profile}/>
-                    <Route path="/posts" component={Posts}/>
-                    <Route exact path="/" component={App}/>
-                    <Route path="*" component={NotFound}/>
-                </Switch>
-            </div>
-        </HashRouter>
+      <HashRouter>
+          <div>
+              <header>
+                  <NavLink to="/simple_card"> Simple Card</NavLink>{` `}
+                  <NavLink to="/form">Form</NavLink>{` `}
+                  <NavLink to="/modal">Modal</NavLink>{` `}
+                  <NavLink to="/nothing">other is Card</NavLink>{` `}
+              </header>
+              <Switch>
+                  <Route exact path="/simple_card" component={SimpleCard}/>
+                  <Route path="/form" component={Form}/>
+                  <Route path="/modal" component={Modal}/>
+                  <Route path="*" component={Card}/>
+              </Switch>
+          </div>
+      </HashRouter>
     )
+  }
 }
 
-```
+export default App;
 
+```
