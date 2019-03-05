@@ -19,9 +19,11 @@ Promise based HTTP client for the browser
 usually being used on inside `componentDidMount` method
 ```js
 //for example
+import axios from 'axios';
+///....
 
 componentDidMount() {
-    axios.get('localhost:3004/posts')
+    axios.get('localhost:3004/carts')
     .then(res => {
         //NEED TO BE TESTED
         //handle success
