@@ -1,4 +1,4 @@
-# json-server 1
+# [json-server](https://www.npmjs.com/package/json-server) 1
 
 ---
 
@@ -20,14 +20,28 @@
 1. create `db.json` file with content for example
 ```js
 {
-    posts: [{
+    "carts":[{
         "id": 1,
-        "content": "i'm first"
-    },{
+        "product": {
+            "id": 10023,
+            "name": "T-Shirt",
+            "price": 20000,
+            "size": "xxl"
+        },
+        "qty": 5
+    }, {
         "id": 2,
-        "content": "i'm second"
+        "product": {
+            "id": 10024,
+            "name": "Battery",
+            "price": 5000,
+            "size": "AAA"
+        }
     }]
 }
 ```
 
-2. to start, call `json-server --watch db.json`
+2. to start, call `json-server --watch db.json` if can't because port already used, use this `json-server --watch db.json --port 3004` we use port 3004 to start json-server
+   
+3. open your browser with port 3004. `localhost:3004` with url `carts`. and see what it will shows to us
+
