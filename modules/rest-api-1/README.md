@@ -19,30 +19,36 @@ POST `http://shopee.com/api/v2/product`
 
 ### GET
 
-get 1 data or many by specific table / collection
+get 1 data by id
+GET `http://shopee.com/api/v2/product/{id}`
 
-url example to get 1 data
-GET `http://shopee.com/api/v2/product/{id-product}`
-
-url example to get many datas
+get many datas
 GET `http://shopee.com/api/v2/product/`
 
 ### PUT
 
-replace 1 record with new all fields from front end
-
-url example
-PUT `http://shopee.com/api/v2/product/{id-product}`
+replace 1 record with new all fields
+PUT `http://shopee.com/api/v2/product/{id}`
 
 ### PATCH
 
-replace only specific field from front end to back end
+replace only specific field
 
 url example
-PATCH `http://shopee.com/api/v2/product/{id-product}`
+PATCH `http://shopee.com/api/v2/product/{id}`
 
 ### DELETE
 
-delete 1 record by giving id-product
+delete 1 record by giving product id
 url example
-DELETE `http://shopee.com/api/v2/product/{id-product}`
+DELETE `http://shopee.com/api/v2/product/{id}`
+
+---
+
+## Resume
+
+### GET, PUT, PATCH, DELETE
+http://shopee.com/api/v2/product/{id}
+
+### POST, GET
+http://shopee.com/api/v2/product
