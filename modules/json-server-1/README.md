@@ -45,3 +45,6 @@
    
 3. open your browser with port 3004. `localhost:3004` with url `carts`. and see what it will shows to us
 
+## To test, use [postman](https://www.getpostman.com/downloads/)
+
+i'll explain to you how to use it
