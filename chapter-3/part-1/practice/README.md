@@ -21,18 +21,16 @@ as user
 * Do `create-react-app` inside `practice-5-todo-list-app`
 * Install `storybook`, `json-server`
 
-## Version 1
+## Version 1 (Simple view)
 
-* Create `AddList`, consist of `input` & `button` HTML tag
+* Create `AddList` folder in `organisms` folder. Create `index.js` & `stories.js`. It consist of `input` & `button` HTML tag
   
   ![](./assets/addlist.png)
 
-  and `ShowList` , consist of list (using HTML tag `l0`, `li`, `button`)
+  and `ShowList` folder in `organisms` folder. Create `index.js` & `stories.js`. It consist of list (using HTML tag `l0`, `li`, `button`)
   
   ![](./assets/showlist.png)
   
-  on `organisms` folder.
-* Create storybook each of `organisms` & test it only visual
 * Combine them in `templates` folder and create folder named `TodoList` and put in here. try test using storybook
 * Create `TodoList` folder on `pages`. inside `TodoList` folder has file where add component of `templates/TodoList`
 * Change App.js to load `pages/TodoList`
@@ -43,4 +41,4 @@ results
 ![](./assets/version-1.png)
 
 ---
-## Version 2
+## [Version 2](./README2.md)
