@@ -14,6 +14,8 @@ as user
 
 ![](./assets/design.png)
 
+---
+
 ## Preparation
 
 * Create repository on github named `practice-5-todo-list-app`
@@ -21,7 +23,15 @@ as user
 * Do `create-react-app` inside `practice-5-todo-list-app`
 * Install `storybook`, `json-server`
 
+---
+
 ## Version 1 (Simple view)
+
+we create web app view without any function / interaction with user
+
+--- 
+
+## Todo
 
 * Create `AddList` folder in `organisms` folder. Create `index.js` & `stories.js`. It consist of `input` & `button` HTML tag
   
