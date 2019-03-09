@@ -5,7 +5,7 @@
 
 ## Introduction
 
-Promise based HTTP client for the browser
+Promise based HTTP client for the browser. If access from different backend / API, use prefix of `http://` on URL. because have CORS issue
 
 ---
 
@@ -20,7 +20,7 @@ Promise based HTTP client for the browser
 ### POST
 
 ```js
-axios.post('/user', {
+axios.post('http://localhost:3000/user', {
     firstName: 'Miya',
     lastName: 'Yuki'
 })
@@ -35,18 +35,18 @@ axios.post('/user', {
 ### GET
 
 ```js
-axios.get('/user',)
+axios.get('http://localhost:3000/user',
 .then( response => {
     // ...
 })
 
-axios.get(`/user/${id}`,)
+axios.get(`http://localhost:3000/user/${id}`)
 .then( response => {
     // ...
 })
 
 
-axios.get('/user', {
+axios.get('http://localhost:3000/user', {
     params: {
         id: 111
     }
@@ -55,13 +55,13 @@ axios.get('/user', {
     // ...
 })
 // same as but we don't recommended
-axios.get('/user?id=111')
+axios.get('http://localhost:3000/user?id=111')
 ```
 
 ### PATCH
 
 ```js
-axios.patch('/user', {
+axios.patch('http://localhost:3000/user', {
     firstName: 'Emilia'
 })
 ```
@@ -69,7 +69,7 @@ axios.patch('/user', {
 ### PUT
 
 ```js
-axios.put(`/user/${id}`,{
+axios.put(`http://localhost:3000/user/${id}`,{
     firstName: 'nanoha',
     lastName: 'takanashi'
 })
@@ -78,7 +78,7 @@ axios.put(`/user/${id}`,{
 ### DELETE
 
 ```js
-axios.delete(`/user/${id}`)
+axios.delete(`http://localhost:3000/user/${id}`)
 ```
 
 ---
@@ -93,7 +93,7 @@ import axios from 'axios';
 ///....
 
 componentDidMount() {
-    axios.get('localhost:3004/carts')
+    axios.get('http://localhost:3004/carts')
     .then(res => {
         this.setState({
             posts: res.data
