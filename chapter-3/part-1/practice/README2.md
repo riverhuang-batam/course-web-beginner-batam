@@ -10,7 +10,14 @@ as user
 
 ---
 
-## Version 2 (Intreactive)
+## Version 2 (Local Intreactive)
+
+* When user type on inputed and press button add, the inputed will clear.
+* When list is load, first initial is no data then after it's loaded it will add list item.
+
+---
+
+## Todo
 
 * on `AddTodo/index.js`. when user type on input and button clicked, the input typed by user will be gone.
   
@@ -27,3 +34,7 @@ as user
       todo: "Do Laundry"
   }]
   ```
+
+  The array data will be loop with `map` array function to produce `li` tag HTML
+  
+## [Version 3](./README3.md)
