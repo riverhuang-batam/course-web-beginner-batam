@@ -14,7 +14,8 @@ as user
 
 * When first time show, `ShowList` Component will get all `todoList` to backend API.
 * When button add press, it will send `AddList` input data to backend API and saved. Then will return to web app is it success or fail. if success will added to `ShowList` component
-* When button delete is press. it will send to backend API to delete that item. Then will return to `ShowList` is it success or fail. if success then will be removed on `ShowList` 
+* When button edit is presss. will show `window.prompt` where we can change value. When press ok will sent to backend API to be saved on database.
+* When button delete is press. will show confirmation using `window.confirm`. it will send to backend API to delete that item. Then will return to `ShowList` is it success or fail. if success then will be removed on `ShowList` 
 
 ---
 

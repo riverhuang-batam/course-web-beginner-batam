@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import Item from './../../molecules/Item';
+
+
 export default class ShowList extends Component {
 
     constructor(props){
@@ -24,9 +27,10 @@ export default class ShowList extends Component {
     }
 
     render() {
-        console.log(this.state.list);
         const Lists = this.state.list.map(item => {
-            return (<li key={item.id}>{item.todo} <button>Edit</button><button>Del</button></li>)
+            return (
+                <Item key={item.id} data={item}/>
+            )
         })
 
         return (
