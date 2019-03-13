@@ -27,3 +27,10 @@
    3. Ordered HTML List
    4. Nested HTML Lists
    5. Horizontal List with CSS
+5. [Blocks](https://www.w3schools.com/html/html_blocks.asp)
+   focus on
+   1. HTML Block and inline elements
+   2. Block Level element
+   3. inline elements
+   4. The `<div>` Element
+   5. The `<span>` Element
