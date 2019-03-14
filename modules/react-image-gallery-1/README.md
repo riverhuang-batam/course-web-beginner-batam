@@ -1,4 +1,4 @@
-#react-image-gallery 1
+# react-image-gallery 1
 
 ---
 
