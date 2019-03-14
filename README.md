@@ -11,13 +11,13 @@ Hello Students! Welcome to the  beginner web programming course from Impact Byte
 * [Chapter 1](chapter-1/README.md): Introduction, Git, Github, Editor, HTML, npm, CSS, Javascript
 * [Chapter 2](chapter-2/README.md): Javascript, React, Reactstrap, Atomic Design, Story Book, React Props State, React Lifecycle
 * [Chapter 3](chapter-3/README.md): React Router, json-server, Axios, REST API, Redux, React Redux, react-table, react-burger-menu, react-ladda, react-slick, rechart, react-datepicker
-* [Chapter 4](chapter-4/README.md): React Redux, react-facebook-login, react-paginate, react-image-gallery, rc-calendar, react-beautiful-dnd
+* [Chapter 4](chapter-4/README.md): React Redux, react-paginate, react-image-gallery, rc-calendar, react-beautiful-dnd, react, jest, MVP, react-facebook-login
 
 <!-- react-notification-system, react-player, google-map-react, -->
-* [Chapter 5](chapter-5/README.md): Case Study Shopee
-* [Chapter 6](chapter-6/README.md): Case Study Shopee
-* [Chapter 7](chapter-7/README.md): Final Project
-* [Chapter 8](chapter-8/README.md): Final Project, Presentation
+* [Chapter 5](chapter-5/README.md): instagram, platform, facebook messenger platform,
+* [Chapter 6](chapter-6/README.md): facebook messenger platform, mock up shoppe
+* [Chapter 7](chapter-7/README.md): Shopee Shopping cart, React Native Introduction
+* [Chapter 8](chapter-8/README.md): React Native Beginner, React Native todo app
 
 ---
 
