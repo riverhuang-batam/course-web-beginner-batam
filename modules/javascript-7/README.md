@@ -30,11 +30,11 @@ Global scole example:
 let carName = "Volvo";
 // code here can use carName
 console.log(`carName 1 is ${carName}`)
-function myFunction() {
+function myFunction2() {
     // code here can also use carName 
     console.log(`carName 2 is ${carName}`)
 }
-myFunction();
+myFunction2();
 console.log(`carName 3 is ${carName}`)
 ```
 
