@@ -12,12 +12,16 @@
 Local scope example:
 ```js
 // code here can NOT use carName
-
+console.log('carName 1', carName)
 function myFunction() {
-    var carName = "Volvo";
+    let carName = "Volvo";
     // code here CAN use carName
-
+    console.log('carName 2', carName)
 }
+// code here can NOT use carName
+console.log('carName 3', carName)
+myFunction();
+console.log('carName 4', carName)
 ```
 
 
@@ -25,9 +29,10 @@ Global scole example:
 ```js
 var carName = "Volvo";
 // code here can use carName
-
+console.log(`carName is ${carName}`)
 function myFunction() {
     // code here can also use carName 
+    console.log(`carName is ${carName}`)
 }
 ```
 
