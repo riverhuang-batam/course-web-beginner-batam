@@ -95,6 +95,7 @@ var person2 = {
 }
 
 person1.fullName.bind(person2)()
+person1.fullName()
 ```
 
 ---

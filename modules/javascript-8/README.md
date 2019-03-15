@@ -7,6 +7,7 @@
 ```js
 class Circle extends Shape {
   constructor (radius) {
+    debugger;
     this.radius = radius;
   }
   getArea() {
@@ -15,7 +16,9 @@ class Circle extends Shape {
 }
 
 let circle = new Cicle(10);
-circle.getArea();
+let totalArea = circle.getArea();
+console.log(`this totalArea is ${totalArea}`)
+
 ```
 
 ---
@@ -41,15 +44,18 @@ console.log(sayHi);
 
  const functionName2 = (argument1) => {
    // do something here
+   console.log(argument1)
  }
 
 // can become like below if has only one argument
 const functionName3 = argument1 => {
    // do something here
+   console.log(argument1)
  }
 
 // can become like below if only one statement, this will return value
 const functionName4 = argument1 => `hi i'm argument1 with value ${argument1}`;
+console.log(`functionName4 is ${functionName4}`)
 ```
 
 ---
@@ -166,7 +172,7 @@ export default function () { ... }
 // same as: module.exports.default = ...
 
 export function myMethod() { ... }
-// same as: module.export.mymethod = ...
+// same as: module.exports.mymethod = ...
 
 export const pi = 3.14159;
 // same as: module.exports.pi = ...
