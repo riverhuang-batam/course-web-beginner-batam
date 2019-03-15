@@ -40,15 +40,15 @@ console.log(`carName 3 is ${carName}`)
 
 If you assign a value to a variable that has not been declared, it will automatically become a global variable:
 ```js
-myFunction();
+myFunction3();
 // code here can use carName 
-console.log(`carName 1 is ${carName}`)
+console.log(`carName 1 is ${carName3}`)
 
-function myFunction() {
-    carName = "Volvo";
+function myFunction3() {
+    carName3 = "Volvo";
 }
 
-console.log(`carName 2 is ${carName}`)
+console.log(`carName 2 is ${carName3}`)
 ```
 
 ### `This` keyword in JavaScript
@@ -58,10 +58,11 @@ In a function definition, this refers to the "owner" of the function.
 If we run this code inside browser, this refer to window Object.
 
 ```js
-function myFunction() {
+function myFunction4() {
     debugger;
     return this;
 }
+myFunction4();
 ```
 
 In this example this refer to a person object.
@@ -76,6 +77,7 @@ let person = {
         return this.firstName + " " + this.lastName;
     }
 };
+console.log(`person fullname is ${person.fullName()}`)
 ```
 
 ### Object Binding Using bind()
@@ -83,6 +85,7 @@ let person = {
 ```js
 let person1 = {
     fullName: function() {
+        debugger;
         return this.firstName + " " + this.lastName;
     }
 }
