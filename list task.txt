@@ -1,45 +1,9 @@
-##tree house
-web design process
-web typography
-css layout basic
-responsive layout
-css flexbox layout
-css transitions transform
-SVG basic
-animating SVG with css
-CSS grid layout
+test
 
-
-visual design
-UX for web designer
-design software
-SEO
-
-
-impactbyte.com
-www.ruangkreasi.co
-https://www.handrichkongdro.com/
-https://thisisneat.com.au/
-http://www.creativereactionlab.com/
-
-
-Handy SEO tools
-Google Keyword Planner
-Google Trends
-Screaming Frog’s SEO Spider
-
-
-Awesome content creation tools
-Google Docs
-Dropbox Paper
-Quip
-Gather Content
-google map
-
-
-Website testing tools
-W3C Link Checker
-SEO Spider
-
-
-how to add comment on website
+test & learn
+http://localhost:8642/modules/redux-1/README.md
+http://localhost:8642/modules/react-redux-1/README.md
+http://localhost:8642/modules/react-ladda-1/README.md
+http://localhost:8642/modules/react-slick-1/README.md
+http://localhost:8642/modules/recharts-1/README.md
+http://localhost:8642/modules/react-datepicker-1/README.md

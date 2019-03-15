@@ -18,6 +18,8 @@ Declarative routing, easy to maintain what module to be load based URL.
 
 ```js
 // usually in App.js or index.js
+// for practice we will build on storyboad in organisms folder
+// create stories.js too
 
 import React, { Component } from 'react';
 import { HashRouter, NavLink, Route, Switch} from 'react-router-dom';
@@ -37,7 +39,7 @@ class App extends Component {
                   <NavLink to="/simple_card"> Simple Card</NavLink>{` `}
                   <NavLink to="/form">Form</NavLink>{` `}
                   <NavLink to="/modal">Modal</NavLink>{` `}
-                  <NavLink to="/nothing">other is Card</NavLink>{` `}
+                  <NavLink to="/nothing">other is Card</NavLink>
               </header>
               <Switch>
                   <Route exact path="/simple_card" component={SimpleCard}/>
