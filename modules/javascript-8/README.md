@@ -139,12 +139,18 @@ module.exports = { hello, bye }
 const App = {
   start() {
     console.log('running')
+  },
+  end() {
+    console.log('stop')
   }
 }
 
 const App2 = {
   start: () => {
     console.log('running')
+  },
+  end: () => {
+    console.log('stop)
   }
 }
 ```
