@@ -5,9 +5,8 @@
 ## Classes
 
 ```js
-class Circle extends Shape {
+class Circle {
   constructor (radius) {
-    debugger;
     this.radius = radius;
   }
   getArea() {
@@ -15,7 +14,7 @@ class Circle extends Shape {
   }
 }
 
-let circle = new Cicle(10);
+let circle = new Circle(10);
 let totalArea = circle.getArea();
 console.log(`this totalArea is ${totalArea}`)
 
@@ -38,7 +37,9 @@ console.log(sayHi);
 ```js
  const functionName1 = () => {
    // do something here
+   console.log('no parameter');
  }
+ functionName1();
 
  // or 
 
@@ -46,12 +47,14 @@ console.log(sayHi);
    // do something here
    console.log(argument1)
  }
+ functionName2();
 
 // can become like below if has only one argument
 const functionName3 = argument1 => {
    // do something here
    console.log(argument1)
  }
+ functionName3();
 
 // can become like below if only one statement, this will return value
 const functionName4 = argument1 => `hi i'm argument1 with value ${argument1}`;
@@ -73,13 +76,16 @@ console.log(`functionName4 is ${functionName4}`)
   console.log(object);
 
   const { name, live } = object;
+  // its same like 
+  // const name = object.name
+  // const live = boejct.live
   console.log(name, live) // Budi Batam
 ```
 
 ### can be used on parameter matching
 
 ```js
-  const simpleFunction = ({name, gender}) => `hi my name is ${name} with gender ${gender}`
+  const simpleFunction = ({ name, gender }) => `hi my name is ${name} with gender ${gender}`
   const greeting = simpleFunction(object)
   console.log(greeting)
 ```
