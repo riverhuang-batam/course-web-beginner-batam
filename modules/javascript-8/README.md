@@ -47,18 +47,20 @@ console.log(sayHi);
    // do something here
    console.log(argument1)
  }
- functionName2();
+ functionName2('show message');
 
 // can become like below if has only one argument
 const functionName3 = argument1 => {
    // do something here
    console.log(argument1)
  }
- functionName3();
+let sentences = functionName3('i\'m wanna be programmer');
+console.log(`this sentences is ${sentences}`);
 
 // can become like below if only one statement, this will return value
 const functionName4 = argument1 => `hi i'm argument1 with value ${argument1}`;
-console.log(`functionName4 is ${functionName4}`)
+let newSentences = functionName4('batam')
+console.log(`functionName4 is ${newSentences}`)
 ```
 
 ---
@@ -145,14 +147,18 @@ const App = {
   }
 }
 
+App.start();
+
 const App2 = {
   start: () => {
     console.log('running')
   },
   end: () => {
-    console.log('stop)
+    console.log('stop')
   }
 }
+
+App2.end();
 ```
 
 ---
