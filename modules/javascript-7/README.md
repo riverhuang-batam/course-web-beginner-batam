@@ -34,6 +34,7 @@ function myFunction() {
     // code here can also use carName 
     console.log(`carName 2 is ${carName}`)
 }
+myFunction();
 console.log(`carName 3 is ${carName}`)
 ```
 
