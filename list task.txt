@@ -4,5 +4,3 @@ test & learn
 http://localhost:8642/modules/redux-1/README.md
 http://localhost:8642/modules/react-redux-1/README.md   
 http://localhost:8642/modules/react-ladda-1/README.md       hard .. skip for now.. but should updated
-http://localhost:8642/modules/recharts-1/README.md
-http://localhost:8642/modules/react-datepicker-1/README.md
