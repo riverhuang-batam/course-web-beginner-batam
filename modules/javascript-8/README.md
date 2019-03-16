@@ -163,35 +163,67 @@ App2.end();
 
 ---
 
-## Modules
+## Modules Export & Import
 
-### Imports
+### Multiple named exports
 
 ```js
-import 'helpers'
+// lib.js
+export const sqrt = Math.sqrt;
+export function square(x) {
+  return x * x;
+}
 
-import Express from 'express'
-// same as: const Express = require('express').default || require('express')
+export function diag(x, y) {
+  return sqrt(square(x) + square(y));
+}
 
-import { indent } from 'helpers'
-// same as: const indent = require('helpers').indent
 
-import * as Helpers from 'helpers'
-// same as: const helpers = require('helpers')
 
-import { indentSpaces as indent } from 'helpers'
-// same as: const indent = require('helpers').indentSpace
+// -- main.js ---
+import { square, diag } from 'lib';
+console.log(square(11));
+
+// or
+
+import * as lib from 'lib';
+console.log(lib.square(11));
 ```
 
-### Exports
+---
+
+### Single default export
 
 ```js
-export default function () { ... }
-// same as: module.exports.default = ...
 
-export function myMethod() { ... }
-// same as: module.exports.mymethod = ...
+// myFunct.js
+export default function(){}   // no semicolon!
 
-export const pi = 3.14159;
-// same as: module.exports.pi = ...
+// main1.js
+import myFunct from 'myFunc';
+myFunct()
+
+
+
+// or a class
+// MyClass.js
+export default class { ... } // no semicolon!
+
+//main2.js
+import MyClass from 'MyClass';
+const inst = new MyClass;
+
+```
+
+### Default & multiple export
+
+```js
+
+// DefaultMultipleExport.js
+export default function foo (){}
+export function bar (){ }
+
+
+// DefaultMultipleImport.js
+import foo, { bar } from './DefaultMultipleExport'
 ```
