@@ -5,7 +5,7 @@
 1. open our `command line interface` or `CLI`
 2. type `sudo npm install create-react-app -g`
       * `sudo` in linux is do something, as admin.
-      * `--g` it's option that will be add globaly
+      * `-g` it's option that will be add globaly
 3. go to inside folder `learn-reactjs` where we already create via git before. [previous lession github-1](./../github-1/README.md)
 4. type `create-react-app basic-react`. the `basic-react` means will setup reactjs by creating folder named `basic-react`.
 5. open VS Code. do `add folder to workspace`. The folder we add should `basic-react` folder name.
