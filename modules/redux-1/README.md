@@ -2,15 +2,9 @@
 
 ---
 
-## Introduction
-
-management all states in one container.
-
----
-
 ## Installation
 
-`npm install --save redux`
+`npm install redux --save`
 
 ---
 
@@ -105,3 +99,29 @@ import { createStore } from 'redux'
 import reducers from './reducers'
 const store = createStore(reducers)
 ```
+
+store have 3 properties. There are `getState`, `dispatch` and `subscribe`
+
+
+```js
+const render = () => {
+    document.getElementById('text').innerText = store.getState();
+};
+
+store.subscribe(render);
+render();
+
+/* begin action creator */
+const increment = function () {
+    // below this is action
+    return {
+        type: 'INCREMENT'
+    }
+}
+/* end action creator */
+
+document.addEventListener('click', () => {
+    store.dispatch(increment());
+})
+```
+`see the example on this folder`

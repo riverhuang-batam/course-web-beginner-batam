@@ -2,15 +2,9 @@
 
 ---
 
-## Introduction
-
-official redux for react.
-
----
-
 ## Installation
 
-`npm install --save redux react-redux
+`npm install redux react-redux --save `
 
 ---
 
