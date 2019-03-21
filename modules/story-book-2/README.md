@@ -64,11 +64,15 @@ create file named `stories.js` with content like below
 
 changed to become like this
 ```js
+import { configure } from '@storybook/react';
+
 const req = require.context('./../src', true, /stories.js$/)
 
 function loadStories() {
-    req.keys().forEach(filename => {req(filename)})
+     req.keys().forEach(filename => {req(filename)})
 }
+
+configure(loadStories, module);
 ```
 
 ## Run Storybook
